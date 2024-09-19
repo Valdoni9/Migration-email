@@ -1,0 +1,385 @@
+Here is imapsync 2.290 on host DESKTOP-SDCEAF4, a MSWin32 system with 23.4/31.9 free GiB of RAM, 26.93% used by processes.
+with Perl 5.32.1 and Mail::IMAPClient 3.43
+Transfer started at Monday 16 September 2024-09-16 15:22:20 Hora Padrão Brasil Central
+PID is 13256 my PPID is unknown under MSWin32 (too complicated)
+Log file is LOG_imapsync/2024_09_16_15_22_20_099_no-reply_arloesitech_com_br_no-reply_arloesitech_com_br.txt ( to change it, use --logfile path ; or use --nolog to turn off logging )
+Load is unknown on 8 cores
+Real user id is valdo (uid 0)
+Effective user id is valdo (euid 0)
+$RCSfile: imapsync,v $ $Revision: 2.290 $ $Date: 2024/08/20 10:37:23 $ 
+Command line used, run by perl.exe:
+C:\Users\valdo\Downloads\Sites migração\imapsync_2.290\imapsync.exe --host1 imap.uni5.net --user1 no-reply@arloesitech.com.br --password1 MASKED --ssl1 --port1 993 --host2 imap.hostinger.com --user2 no-reply@arloesitech.com.br --password2 MASKED --ssl2 --port2 993
+Current directory is C:/Users/valdo/Downloads/Sites migração/imapsync_2.290
+Temp directory is ./ ( to change it use --tmpdir dirpath )
+Creating temp directory ./
+kill -QUIT 13256 # special behavior: call to sub catch_exit
+kill -TERM 13256 # special behavior: call to sub catch_exit
+kill -INT 13256 # special behavior: call to sub catch_reconnect
+kill -HUP 13256 # special behavior: call to sub catch_print
+Logging to a logfile by default. To turn off logging, use --nolog
+File .//imapsync.pid does not exist
+PID file is .//imapsync.pid ( to change it, use --pidfile filepath ; to avoid it use --pidfile "" )
+Writing my PID 13256 in .//imapsync.pid
+Writing also my logfile name in .//imapsync.pid : LOG_imapsync/2024_09_16_15_22_20_099_no-reply_arloesitech_com_br_no-reply_arloesitech_com_br.txt
+Modules version list ( use --no-modulesversion to turn off printing this Perl modules list ):
+Authen::NTLM         1.09
+CGI                  Not installed
+Compress::Zlib       2.1
+Crypt::OpenSSL::RSA  0.33
+Digest::HMAC_MD5     1.04
+Digest::HMAC_SHA1    1.04
+Digest::MD5          2.58
+Digest::SHA          6.02
+Encode               3.19
+Encode::IMAPUTF7     1.05
+File::Copy::Recursive 0.45
+File::Spec           3.78
+Getopt::Long         2.52
+HTML::Entities       3.81
+IO::Socket           1.51
+IO::Socket::INET     1.51
+IO::Socket::INET6    2.73
+IO::Socket::IP       0.42
+IO::Socket::SSL      2.083
+IO::Tee              0.65
+JSON                 4.10
+JSON::WebToken       0.10
+LWP                  6.72
+MIME::Base64         3.16
+Mail::IMAPClient     3.43
+Net::Ping            2.74
+Net::SSLeay          1.92
+Term::ReadKey        2.38
+Test::MockObject     1.20200122
+Time::HiRes          1.9764
+Unicode::String      2.10
+
+Info: will resync flags for already transferred messages. Use --noresyncflags to not resync flags.
+SSL debug mode level is --debugssl 1 (can be set from 0 meaning no debug to 4 meaning max debug)
+Host1: SSL default mode is like --sslargs1 "SSL_verify_mode=0", meaning for host1 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host1: Use --sslargs1 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host1
+Host2: SSL default mode is like --sslargs2 "SSL_verify_mode=0", meaning for host2 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host2: Use --sslargs2 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host2
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Host1: will try to use LOGIN authentication on host1
+Host2: will try to use LOGIN authentication on host2
+Host1: imap connection timeout is 120 seconds
+Host2: imap connection timeout is 120 seconds
+Host1: imap connection keepalive is on on host1. Use --nokeepalive1 to disable it.
+Host2: imap connection keepalive is on on host2. Use --nokeepalive2 to disable it.
+Host1: IMAP server [imap.uni5.net] port [993] user [no-reply@arloesitech.com.br]
+Host2: IMAP server [imap.hostinger.com] port [993] user [no-reply@arloesitech.com.br]
+Host1: connecting and login on host1 [imap.uni5.net] port [993] with user [no-reply@arloesitech.com.br]
+Host1 IP address: 191.6.220.6 Local IP address: 192.168.0.46
+Host1 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+Host1 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN AUTH
+Host1: imap.uni5.net says it has CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [imap.uni5.net] with user [no-reply@arloesitech.com.br] auth [LOGIN] or [LOGIN]
+Host2: connecting and login on host2 [imap.hostinger.com] port [993] with user [no-reply@arloesitech.com.br]
+Host2 IP address: 172.65.188.64 Local IP address: 192.168.0.46
+Host2 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Server ready.
+Host2 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH
+Host2: imap.hostinger.com says it has CAPABILITY for AUTHENTICATE LOGIN
+Host2: success login on [imap.hostinger.com] with user [no-reply@arloesitech.com.br] auth [LOGIN] or [LOGIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS MOVE QUOTA THREAD I18NLEVEL CONTEXT
+Host2 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE SNIPPET=FUZZY PREVIEW=FUZZY PREVIEW STATUS=SIZE SAVEDATE LITERAL+ NOTIFY SPECIAL-USE COMPRESS=DEFLATE QUOTA THREAD I18NLEVEL CONTEXT SNIPPET PREVIEW STATUS COMPRESS
+Host1: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.290" "os" "MSWin32" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "20-Aug-2024 10:37:23 +0000" "side" "host1")
+Sent 183 bytes
+Read: 	* ID ("name" "Dovecot")
+  	4 OK ID completed (0.001 + 0.000 secs).
+Host2: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.290" "os" "MSWin32" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "20-Aug-2024 10:37:23 +0000" "side" "host2")
+Sent 183 bytes
+Read: 	* ID ("name" "Dovecot")
+  	4 OK ID completed (0.001 + 0.000 secs).
+
+Host2: QUOTA capability found, presented in raw IMAP on next lines
+Sending: 5 GETQUOTAROOT INBOX
+Sent 22 bytes
+Read: 	* QUOTAROOT INBOX "Storage quota"
+  	* QUOTA "Storage quota" (STORAGE 22 1048576 MESSAGE 1 15000)
+  	5 OK Getquotaroot completed (0.004 + 0.000 + 0.003 secs).
+
+Host2: Quota current storage is 22528 bytes. Limit is 1073741824 bytes. So 0.00 % full
+Host1: Compression is off. Use --compress1 to allow compression on host1
+Host2: Compression is off. Use --compress2 to allow compression on host2
+Compression often generates annoying errors, especially with SSL connexions, Gmail, Office365. So, avoid it.
+Host1: found 5 folders.
+Host2: found 5 folders.
+Host1: guessing separator from folder listing: [.]
+Host1: separator given by NAMESPACE: [.]
+Host2: guessing separator from folder listing: [.]
+Host2: separator given by NAMESPACE: [.]
+Host1: guessing prefix from folder listing: [INBOX.]
+Host1: prefix given by NAMESPACE: [INBOX.]
+Host2: guessing prefix from folder listing: [INBOX.]
+Host2: prefix given by NAMESPACE: [INBOX.]
+Host1: separator and prefix: [.][INBOX.]
+Host2: separator and prefix: [.][INBOX.]
+Including all folders found by default. Use --subscribed or --folder or --folderrec or --include to select specific folders. Use --exclude to unselect specific folders.
+Host1: Checking wanted folders exist. Use --nocheckfoldersexist to avoid this check (shared of public namespace targeted).
+Host1: Checking wanted folders are selectable. Use --nocheckselectable to avoid this check.
+Turned off automapping folders ( use --automap to turn on automapping )
+
+++++ Listing folders
+All foldernames are presented between brackets like [X] where X is the foldername.
+When a foldername contains non-ASCII characters it is presented in the form
+[X] = [Y] where
+X is the imap foldername you have to use in command line options and
+Y is the utf8 output just printed for convenience, to recognize it.
+
+Host1: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasChildren) "." INBOX
+* LIST (\HasNoChildren \UnMarked) "." INBOX.Trash
+* LIST (\HasNoChildren) "." INBOX.Sent
+* LIST (\HasNoChildren) "." INBOX.Drafts
+* LIST (\HasNoChildren \UnMarked \Junk) "." INBOX.Spam
+14 OK List completed (0.001 + 0.000 secs).
+
+[INBOX]
+[INBOX.Drafts]
+[INBOX.Sent]
+[INBOX.Spam]
+[INBOX.Trash]
+
+Host2: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasChildren) "." INBOX
+* LIST (\HasNoChildren \Drafts) "." INBOX.Drafts
+* LIST (\HasNoChildren \Junk) "." INBOX.Junk
+* LIST (\HasNoChildren \Sent) "." INBOX.Sent
+* LIST (\HasNoChildren \Trash) "." INBOX.Trash
+10 OK List completed (0.001 + 0.000 secs).
+
+[INBOX]
+[INBOX.Drafts]
+[INBOX.Junk]
+[INBOX.Sent]
+[INBOX.Trash]
+
+Folders in host2 not in host1:
+[INBOX.Junk]
+
+Checking SEARCH ALL works on both accounts. To avoid that check, use --nochecknoabletosearch
+Host1: checking if SEARCH ALL works on INBOX
+Host1: folder [INBOX] has 46 messages mentioned by SELECT
+Host1: folder [INBOX] has 46 messages found by SEARCH ALL
+Host1: folder [INBOX] has the same messages count (46) by SELECT and SEARCH ALL
+Host2: checking if SEARCH ALL works on INBOX
+Host2: folder [INBOX] has 1 messages mentioned by SELECT
+Host2: folder [INBOX] has 1 messages found by SEARCH ALL
+Host2: folder [INBOX] has the same messages count (1) by SELECT and SEARCH ALL
+Good! SEARCH ALL works on both accounts.
+
+Folders sizes before the synchronization. It can take some time. Be patient.
+You can remove foldersizes listings by using "--nofoldersizes" and "--nofoldersizesatend"
+but then you will also lose the ETA (Estimation Time of Arrival) given after each message copy.
+Host1 folder     1/5 [INBOX]                             Size:    844027 Messages:    46 Biggest:     71737
+Host2 folder     1/5 [INBOX]                             Size:     21686 Messages:     1 Biggest:     21686
+Host2-Host1                                                      -822341             -45             -50051
+
+Host1 folder     2/5 [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host2 folder     2/5 [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     3/5 [INBOX.Sent]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder     3/5 [INBOX.Sent]                        Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     4/5 [INBOX.Spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder     4/5 [INBOX.Spam]                         does not exist yet
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     5/5 [INBOX.Trash]                       Size:         0 Messages:     0 Biggest:         0
+Host2 folder     5/5 [INBOX.Trash]                       Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 Nb folders:                     5 folders
+Host2 Nb folders:                     5 folders
+
+Host1 Nb messages:                   46 messages
+Host2 Nb messages:                    1 messages
+
+Host1 Total size:                844027 bytes (824.245 KiB)
+Host2 Total size:                 21686 bytes (21.178 KiB)
+
+Host1 Biggest message:            71737 bytes (70.056 KiB)
+Host2 Biggest message:            21686 bytes (21.178 KiB)
+
+Time spent on sizing:        11.0 seconds
+++++ Looping on each one of 5 folders to sync
+ETA: Monday 16 September 2024-09-16 15:22:31 Hora Padrão Brasil Central  0 s  46/46 msgs left
+Folder     1/5 [INBOX]                             -> [INBOX]                            
+Host1: folder [INBOX] has 46 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] has 1 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] permanentflags: 
+Host1: folder [INBOX] considering 46 messages
+Host2: folder [INBOX] considering 1 messages
+Host1: folder [INBOX] selected 46 messages, duplicates 0
+Host2: folder [INBOX] selected 1 messages, duplicates 0
+msg INBOX/1 {4212}            copied to INBOX/2          0.40 msgs/s  1.664 KiB/s 4.113 KiB copied ETA: Monday 16 September 2024-09-16 15:24:24 Hora Padrão Brasil Central  111 s  45/46 msgs left
+msg INBOX/2 {62460}           copied to INBOX/3          0.60 msgs/s  19.418 KiB/s 65.109 KiB copied ETA: Monday 16 September 2024-09-16 15:23:48 Hora Padrão Brasil Central  74 s  44/46 msgs left
+msg INBOX/3 {62595}           copied to INBOX/4          0.73 msgs/s  30.586 KiB/s 126.237 KiB copied ETA: Monday 16 September 2024-09-16 15:23:34 Hora Padrão Brasil Central  59 s  43/46 msgs left
+msg INBOX/4 {21166}           copied to INBOX/5          0.83 msgs/s  30.390 KiB/s 146.907 KiB copied ETA: Monday 16 September 2024-09-16 15:23:26 Hora Padrão Brasil Central  51 s  42/46 msgs left
+msg INBOX/5 {21398}           copied to INBOX/6          0.89 msgs/s  29.842 KiB/s 167.804 KiB copied ETA: Monday 16 September 2024-09-16 15:23:22 Hora Padrão Brasil Central  46 s  41/46 msgs left
+msg INBOX/6 {21078}           copied to INBOX/7          0.95 msgs/s  29.840 KiB/s 188.388 KiB copied ETA: Monday 16 September 2024-09-16 15:23:19 Hora Padrão Brasil Central  42 s  40/46 msgs left
+msg INBOX/7 {21344}           copied to INBOX/8          1.00 msgs/s  29.798 KiB/s 209.231 KiB copied ETA: Monday 16 September 2024-09-16 15:23:17 Hora Padrão Brasil Central  39 s  39/46 msgs left
+msg INBOX/8 {6135}            copied to INBOX/9          1.01 msgs/s  27.237 KiB/s 215.223 KiB copied ETA: Monday 16 September 2024-09-16 15:23:16 Hora Padrão Brasil Central  38 s  38/46 msgs left
+msg INBOX/9 {7347}            copied to INBOX/10         1.03 msgs/s  25.490 KiB/s 222.397 KiB copied ETA: Monday 16 September 2024-09-16 15:23:15 Hora Padrão Brasil Central  36 s  37/46 msgs left
+msg INBOX/10 {8015}           copied to INBOX/11         1.08 msgs/s  24.817 KiB/s 230.225 KiB copied ETA: Monday 16 September 2024-09-16 15:23:13 Hora Padrão Brasil Central  33 s  36/46 msgs left
+msg INBOX/11 {55343}          copied to INBOX/12         1.10 msgs/s  28.369 KiB/s 284.271 KiB copied ETA: Monday 16 September 2024-09-16 15:23:13 Hora Padrão Brasil Central  32 s  35/46 msgs left
+msg INBOX/12 {6443}           copied to INBOX/13         1.13 msgs/s  27.444 KiB/s 290.562 KiB copied ETA: Monday 16 September 2024-09-16 15:23:11 Hora Padrão Brasil Central  30 s  34/46 msgs left
+msg INBOX/13 {6368}           copied to INBOX/14         1.16 msgs/s  26.544 KiB/s 296.781 KiB copied ETA: Monday 16 September 2024-09-16 15:23:10 Hora Padrão Brasil Central  28 s  33/46 msgs left
+msg INBOX/14 {5638}           copied to INBOX/15         1.19 msgs/s  25.746 KiB/s 302.287 KiB copied ETA: Monday 16 September 2024-09-16 15:23:09 Hora Padrão Brasil Central  27 s  32/46 msgs left
+msg INBOX/15 {5640}           copied to INBOX/16         1.22 msgs/s  25.061 KiB/s 307.795 KiB copied ETA: Monday 16 September 2024-09-16 15:23:08 Hora Padrão Brasil Central  25 s  31/46 msgs left
+msg INBOX/16 {5639}           copied to INBOX/17         1.25 msgs/s  24.428 KiB/s 313.302 KiB copied ETA: Monday 16 September 2024-09-16 15:23:07 Hora Padrão Brasil Central  24 s  30/46 msgs left
+msg INBOX/17 {6359}           copied to INBOX/18         1.27 msgs/s  23.838 KiB/s 319.512 KiB copied ETA: Monday 16 September 2024-09-16 15:23:07 Hora Padrão Brasil Central  23 s  29/46 msgs left
+msg INBOX/18 {6336}           copied to INBOX/19         1.28 msgs/s  23.147 KiB/s 325.699 KiB copied ETA: Monday 16 September 2024-09-16 15:23:07 Hora Padrão Brasil Central  22 s  28/46 msgs left
+msg INBOX/19 {22029}          copied to INBOX/20         1.29 msgs/s  23.581 KiB/s 347.212 KiB copied ETA: Monday 16 September 2024-09-16 15:23:06 Hora Padrão Brasil Central  21 s  27/46 msgs left
+msg INBOX/20 {21993}          copied to INBOX/21         1.30 msgs/s  23.951 KiB/s 368.689 KiB copied ETA: Monday 16 September 2024-09-16 15:23:06 Hora Padrão Brasil Central  20 s  26/46 msgs left
+msg INBOX/21 {21813}          copied to INBOX/22         1.31 msgs/s  24.247 KiB/s 389.991 KiB copied ETA: Monday 16 September 2024-09-16 15:23:06 Hora Padrão Brasil Central  19 s  25/46 msgs left
+msg INBOX/22 {6716}           copied to INBOX/23         1.31 msgs/s  23.689 KiB/s 396.550 KiB copied ETA: Monday 16 September 2024-09-16 15:23:06 Hora Padrão Brasil Central  18 s  24/46 msgs left
+msg INBOX/23 {35455}          copied to INBOX/24         1.32 msgs/s  24.783 KiB/s 431.174 KiB copied ETA: Monday 16 September 2024-09-16 15:23:05 Hora Padrão Brasil Central  17 s  23/46 msgs left
+msg INBOX/24 {6239}           copied to INBOX/25         1.34 msgs/s  24.372 KiB/s 437.267 KiB copied ETA: Monday 16 September 2024-09-16 15:23:05 Hora Padrão Brasil Central  16 s  22/46 msgs left
+msg INBOX/25 {5405}           copied to INBOX/26         1.35 msgs/s  23.939 KiB/s 442.545 KiB copied ETA: Monday 16 September 2024-09-16 15:23:05 Hora Padrão Brasil Central  16 s  21/46 msgs left
+msg INBOX/26 {5391}           copied to INBOX/27         1.36 msgs/s  23.504 KiB/s 447.810 KiB copied ETA: Monday 16 September 2024-09-16 15:23:04 Hora Padrão Brasil Central  15 s  20/46 msgs left
+msg INBOX/27 {24261}          copied to INBOX/28         1.37 msgs/s  23.969 KiB/s 471.502 KiB copied ETA: Monday 16 September 2024-09-16 15:23:04 Hora Padrão Brasil Central  14 s  19/46 msgs left
+msg INBOX/28 {35552}          copied to INBOX/29         1.38 msgs/s  24.933 KiB/s 506.221 KiB copied ETA: Monday 16 September 2024-09-16 15:23:04 Hora Padrão Brasil Central  13 s  18/46 msgs left
+msg INBOX/29 {71737}          copied to INBOX/30         1.38 msgs/s  27.410 KiB/s 576.276 KiB copied ETA: Monday 16 September 2024-09-16 15:23:04 Hora Padrão Brasil Central  12 s  17/46 msgs left
+msg INBOX/30 {45413}          copied to INBOX/31         1.38 msgs/s  28.622 KiB/s 620.625 KiB copied ETA: Monday 16 September 2024-09-16 15:23:04 Hora Padrão Brasil Central  12 s  16/46 msgs left
+msg INBOX/31 {13691}          copied to INBOX/32         1.39 msgs/s  28.519 KiB/s 633.995 KiB copied ETA: Monday 16 September 2024-09-16 15:23:04 Hora Padrão Brasil Central  11 s  15/46 msgs left
+msg INBOX/32 {13777}          copied to INBOX/33         1.41 msgs/s  28.431 KiB/s 647.449 KiB copied ETA: Monday 16 September 2024-09-16 15:23:03 Hora Padrão Brasil Central  10 s  14/46 msgs left
+msg INBOX/33 {13644}          copied to INBOX/34         1.41 msgs/s  28.326 KiB/s 660.773 KiB copied ETA: Monday 16 September 2024-09-16 15:23:03 Hora Padrão Brasil Central  9 s  13/46 msgs left
+msg INBOX/34 {11929}          copied to INBOX/35         1.42 msgs/s  28.119 KiB/s 672.423 KiB copied ETA: Monday 16 September 2024-09-16 15:23:03 Hora Padrão Brasil Central  8 s  12/46 msgs left
+msg INBOX/35 {13026}          copied to INBOX/36         1.43 msgs/s  27.919 KiB/s 685.144 KiB copied ETA: Monday 16 September 2024-09-16 15:23:03 Hora Padrão Brasil Central  8 s  11/46 msgs left
+msg INBOX/36 {15347}          copied to INBOX/37         1.43 msgs/s  27.779 KiB/s 700.131 KiB copied ETA: Monday 16 September 2024-09-16 15:23:03 Hora Padrão Brasil Central  7 s  10/46 msgs left
+msg INBOX/37 {12801}          copied to INBOX/38         1.43 msgs/s  27.584 KiB/s 712.632 KiB copied ETA: Monday 16 September 2024-09-16 15:23:03 Hora Padrão Brasil Central  6 s  9/46 msgs left
+msg INBOX/38 {12031}          copied to INBOX/39         1.43 msgs/s  27.334 KiB/s 724.381 KiB copied ETA: Monday 16 September 2024-09-16 15:23:03 Hora Padrão Brasil Central  6 s  8/46 msgs left
+msg INBOX/39 {13375}          copied to INBOX/40         1.44 msgs/s  27.185 KiB/s 737.442 KiB copied ETA: Monday 16 September 2024-09-16 15:23:03 Hora Padrão Brasil Central  5 s  7/46 msgs left
+msg INBOX/40 {12766}          copied to INBOX/41         1.44 msgs/s  27.055 KiB/s 749.909 KiB copied ETA: Monday 16 September 2024-09-16 15:23:02 Hora Padrão Brasil Central  4 s  6/46 msgs left
+msg INBOX/41 {12871}          copied to INBOX/42         1.45 msgs/s  26.968 KiB/s 762.479 KiB copied ETA: Monday 16 September 2024-09-16 15:23:02 Hora Padrão Brasil Central  3 s  5/46 msgs left
+msg INBOX/42 {11935}          copied to INBOX/43         1.46 msgs/s  26.849 KiB/s 774.134 KiB copied ETA: Monday 16 September 2024-09-16 15:23:02 Hora Padrão Brasil Central  3 s  4/46 msgs left
+msg INBOX/43 {15384}          copied to INBOX/44         1.46 msgs/s  26.777 KiB/s 789.157 KiB copied ETA: Monday 16 September 2024-09-16 15:23:02 Hora Padrão Brasil Central  2 s  3/46 msgs left
+msg INBOX/44 {11945}          copied to INBOX/45         1.46 msgs/s  26.644 KiB/s 800.822 KiB copied ETA: Monday 16 September 2024-09-16 15:23:02 Hora Padrão Brasil Central  1 s  2/46 msgs left
+msg INBOX/45 {11961}          copied to INBOX/46         1.47 msgs/s  26.460 KiB/s 812.503 KiB copied ETA: Monday 16 September 2024-09-16 15:23:02 Hora Padrão Brasil Central  1 s  1/46 msgs left
+msg INBOX/46 {12024}          copied to INBOX/47         1.46 msgs/s  26.231 KiB/s 824.245 KiB copied ETA: Monday 16 September 2024-09-16 15:23:02 Hora Padrão Brasil Central  0 s  0/46 msgs left
+ETA: Monday 16 September 2024-09-16 15:23:02 Hora Padrão Brasil Central  0 s  0/46 msgs left
+Folder     2/5 [INBOX.Drafts]                      -> [INBOX.Drafts]                     
+Host1: folder [INBOX.Drafts] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Drafts] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Drafts] permanentflags: 
+Host1: folder [INBOX.Drafts] considering 0 messages
+Host2: folder [INBOX.Drafts] considering 0 messages
+Host1: folder [INBOX.Drafts] selected 0 messages, duplicates 0
+Host2: folder [INBOX.Drafts] selected 0 messages, duplicates 0
+ETA: Monday 16 September 2024-09-16 15:23:03 Hora Padrão Brasil Central  0 s  0/46 msgs left
+Folder     3/5 [INBOX.Sent]                        -> [INBOX.Sent]                       
+Host1: folder [INBOX.Sent] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Sent] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Sent] permanentflags: 
+Host1: folder [INBOX.Sent] considering 0 messages
+Host2: folder [INBOX.Sent] considering 0 messages
+Host1: folder [INBOX.Sent] selected 0 messages, duplicates 0
+Host2: folder [INBOX.Sent] selected 0 messages, duplicates 0
+ETA: Monday 16 September 2024-09-16 15:23:04 Hora Padrão Brasil Central  0 s  0/46 msgs left
+Folder     4/5 [INBOX.Spam]                        -> [INBOX.Spam]                       
+Host1: folder [INBOX.Spam] has 0 messages in total (mentioned by SELECT)
+Creating folder [INBOX.Spam] on host2
+Created folder [INBOX.Spam] on host2
+Host2: folder [INBOX.Spam] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Spam] permanentflags: 
+Host2: Subscribing to folder INBOX.Spam
+Host1: folder [INBOX.Spam] considering 0 messages
+Host2: folder [INBOX.Spam] considering 0 messages
+Host1: folder [INBOX.Spam] selected 0 messages, duplicates 0
+Host2: folder [INBOX.Spam] selected 0 messages, duplicates 0
+ETA: Monday 16 September 2024-09-16 15:23:06 Hora Padrão Brasil Central  0 s  0/46 msgs left
+Folder     5/5 [INBOX.Trash]                       -> [INBOX.Trash]                      
+Host1: folder [INBOX.Trash] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Trash] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Trash] permanentflags: 
+Host1: folder [INBOX.Trash] considering 0 messages
+Host2: folder [INBOX.Trash] considering 0 messages
+Host1: folder [INBOX.Trash] selected 0 messages, duplicates 0
+Host2: folder [INBOX.Trash] selected 0 messages, duplicates 0
+ETA: Monday 16 September 2024-09-16 15:23:07 Hora Padrão Brasil Central  0 s  0/46 msgs left
+++++ End looping on each folder
+
+Folders sizes after the synchronization.
+You can remove this foldersizes listing by using  "--nofoldersizesatend"
+Host1 folder     1/5 [INBOX]                             Size:    844027 Messages:    46 Biggest:     71737
+Host2 folder     1/5 [INBOX]                             Size:    865713 Messages:    47 Biggest:     71737
+Host2-Host1                                                        21686               1                  0
+
+Host1 folder     2/5 [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host2 folder     2/5 [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     3/5 [INBOX.Sent]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder     3/5 [INBOX.Sent]                        Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     4/5 [INBOX.Spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder     4/5 [INBOX.Spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     5/5 [INBOX.Trash]                       Size:         0 Messages:     0 Biggest:         0
+Host2 folder     5/5 [INBOX.Trash]                       Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 Nb folders:                     5 folders
+Host2 Nb folders:                     5 folders
+
+Host1 Nb messages:                   46 messages
+Host2 Nb messages:                   47 messages
+
+Host1 Total size:                844027 bytes (824.245 KiB)
+Host2 Total size:                865713 bytes (845.423 KiB)
+
+Host1 Biggest message:            71737 bytes (70.056 KiB)
+Host2 Biggest message:            71737 bytes (70.056 KiB)
+
+Time spent on sizing:         3.5 seconds
+++++ Statistics
+Transfer started on                     : Monday 16 September 2024-09-16 15:22:20 Hora Padrão Brasil Central
+Transfer ended on                       : Monday 16 September 2024-09-16 15:23:10 Hora Padrão Brasil Central
+Transfer time                           : 50.8 sec
+Folders synced                          : 5/5 synced
+Folders deleted on host2                : 0 
+Messages transferred                    : 46 
+Messages skipped                        : 0
+Messages found duplicate on host1       : 0
+Messages found duplicate on host2       : 0
+Messages found crossduplicate on host2  : 0
+Messages void (noheader) on host1       : 0  
+Messages void (noheader) on host2       : 0
+Messages found in host1 not in host2    : 0 messages
+Messages found in host2 not in host1    : 1 messages
+Messages deleted on host1               : 0
+Messages deleted on host2               : 0
+Total bytes transferred                 : 844027 (824.245 KiB)
+Total bytes skipped                     : 0 (0.000 KiB)
+Message rate                            : 0.9 messages/s
+Average bandwidth rate                  : 16.2 KiB/s
+Reconnections to host1                  : 0
+Reconnections to host2                  : 0
+Memory consumption at the end           : 196.7 MiB (*time 2.8 MiB*h) (started with 182.0 MiB)
+Load end is                             : unknown on 8 cores
+CPU time and %cpu                       : 5.343 sec 10.5 %cpu 1.3 %allcpus
+Biggest message transferred             : 71737 bytes (70.056 KiB)
+Memory/biggest message ratio            : 2875.7
+Start difference host2 - host1          : -45 messages, -822341 bytes (-803.067 KiB)
+Final difference host2 - host1          : 1 messages, 21686 bytes (21.178 KiB)
+The sync looks good, all 46 identified messages in host1 are on host2.
+There is no unidentified message on host1.
+The sync is not strict, there are 1 among 47 identified messages in host2 that are not on host1. Use --delete2 and sync again to delete them and have a strict sync.
+Detected 0 errors
+This imapsync is up to date. ( local 2.290 >= official 2.290 )( Use --noreleasecheck to avoid this release check. )
+Homepage: https://imapsync.lamiral.info/
+Exiting with return value 0 (EX_OK: successful termination) 0/50 nb_errors/max_errors PID 13256
+Removing pidfile .//imapsync.pid
+Log file is LOG_imapsync/2024_09_16_15_22_20_099_no-reply_arloesitech_com_br_no-reply_arloesitech_com_br.txt ( to change it, use --logfile filepath ; or use --nolog to turn off logging )

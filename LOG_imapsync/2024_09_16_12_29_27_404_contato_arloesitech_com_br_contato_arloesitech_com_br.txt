@@ -1,0 +1,852 @@
+Here is imapsync 2.290 on host DESKTOP-SDCEAF4, a MSWin32 system with 23.9/31.9 free GiB of RAM, 29.00% used by processes.
+with Perl 5.32.1 and Mail::IMAPClient 3.43
+Transfer started at Monday 16 September 2024-09-16 12:29:27 Hora Padrão Brasil Central
+PID is 10484 my PPID is unknown under MSWin32 (too complicated)
+Log file is LOG_imapsync/2024_09_16_12_29_27_404_contato_arloesitech_com_br_contato_arloesitech_com_br.txt ( to change it, use --logfile path ; or use --nolog to turn off logging )
+Load is unknown on 8 cores
+Real user id is valdo (uid 0)
+Effective user id is valdo (euid 0)
+$RCSfile: imapsync,v $ $Revision: 2.290 $ $Date: 2024/08/20 10:37:23 $ 
+Command line used, run by perl.exe:
+C:\Users\valdo\Downloads\Sites migração\imapsync_2.290\imapsync.exe --host1 imap.uni5.net --user1 contato@arloesitech.com.br --password1 MASKED --ssl1 --port1 993 --host2 imap.hostinger.com --user2 contato@arloesitech.com.br --password2 MASKED --ssl2 --port2 993
+Current directory is C:/Users/valdo/Downloads/Sites migração/imapsync_2.290
+Temp directory is ./ ( to change it use --tmpdir dirpath )
+Creating temp directory ./
+kill -QUIT 10484 # special behavior: call to sub catch_exit
+kill -TERM 10484 # special behavior: call to sub catch_exit
+kill -INT 10484 # special behavior: call to sub catch_reconnect
+kill -HUP 10484 # special behavior: call to sub catch_print
+Logging to a logfile by default. To turn off logging, use --nolog
+File .//imapsync.pid does not exist
+PID file is .//imapsync.pid ( to change it, use --pidfile filepath ; to avoid it use --pidfile "" )
+Writing my PID 10484 in .//imapsync.pid
+Writing also my logfile name in .//imapsync.pid : LOG_imapsync/2024_09_16_12_29_27_404_contato_arloesitech_com_br_contato_arloesitech_com_br.txt
+Modules version list ( use --no-modulesversion to turn off printing this Perl modules list ):
+Authen::NTLM         1.09
+CGI                  Not installed
+Compress::Zlib       2.1
+Crypt::OpenSSL::RSA  0.33
+Digest::HMAC_MD5     1.04
+Digest::HMAC_SHA1    1.04
+Digest::MD5          2.58
+Digest::SHA          6.02
+Encode               3.19
+Encode::IMAPUTF7     1.05
+File::Copy::Recursive 0.45
+File::Spec           3.78
+Getopt::Long         2.52
+HTML::Entities       3.81
+IO::Socket           1.51
+IO::Socket::INET     1.51
+IO::Socket::INET6    2.73
+IO::Socket::IP       0.42
+IO::Socket::SSL      2.083
+IO::Tee              0.65
+JSON                 4.10
+JSON::WebToken       0.10
+LWP                  6.72
+MIME::Base64         3.16
+Mail::IMAPClient     3.43
+Net::Ping            2.74
+Net::SSLeay          1.92
+Term::ReadKey        2.38
+Test::MockObject     1.20200122
+Time::HiRes          1.9764
+Unicode::String      2.10
+
+Info: will resync flags for already transferred messages. Use --noresyncflags to not resync flags.
+SSL debug mode level is --debugssl 1 (can be set from 0 meaning no debug to 4 meaning max debug)
+Host1: SSL default mode is like --sslargs1 "SSL_verify_mode=0", meaning for host1 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host1: Use --sslargs1 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host1
+Host2: SSL default mode is like --sslargs2 "SSL_verify_mode=0", meaning for host2 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host2: Use --sslargs2 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host2
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Host1: will try to use LOGIN authentication on host1
+Host2: will try to use LOGIN authentication on host2
+Host1: imap connection timeout is 120 seconds
+Host2: imap connection timeout is 120 seconds
+Host1: imap connection keepalive is on on host1. Use --nokeepalive1 to disable it.
+Host2: imap connection keepalive is on on host2. Use --nokeepalive2 to disable it.
+Host1: IMAP server [imap.uni5.net] port [993] user [contato@arloesitech.com.br]
+Host2: IMAP server [imap.hostinger.com] port [993] user [contato@arloesitech.com.br]
+Host1: connecting and login on host1 [imap.uni5.net] port [993] with user [contato@arloesitech.com.br]
+Host1 IP address: 191.6.220.7 Local IP address: 192.168.0.46
+Host1 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+Host1 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH=LOGIN AUTH
+Host1: imap.uni5.net says it has CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [imap.uni5.net] with user [contato@arloesitech.com.br] auth [LOGIN] or [LOGIN]
+Host2: connecting and login on host2 [imap.hostinger.com] port [993] with user [contato@arloesitech.com.br]
+Host2 IP address: 172.65.188.64 Local IP address: 192.168.0.46
+Host2 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Server ready.
+Host2 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH
+Host2: imap.hostinger.com says it has CAPABILITY for AUTHENTICATE LOGIN
+Host2: success login on [imap.hostinger.com] with user [contato@arloesitech.com.br] auth [LOGIN] or [LOGIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS MOVE QUOTA THREAD I18NLEVEL CONTEXT
+Host2 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE SNIPPET=FUZZY PREVIEW=FUZZY PREVIEW STATUS=SIZE SAVEDATE LITERAL+ NOTIFY SPECIAL-USE COMPRESS=DEFLATE QUOTA THREAD I18NLEVEL CONTEXT SNIPPET PREVIEW STATUS COMPRESS
+Host1: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.290" "os" "MSWin32" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "20-Aug-2024 10:37:23 +0000" "side" "host1")
+Sent 183 bytes
+Read: 	* ID ("name" "Dovecot")
+  	4 OK ID completed (0.001 + 0.000 secs).
+Host2: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.290" "os" "MSWin32" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "20-Aug-2024 10:37:23 +0000" "side" "host2")
+Sent 183 bytes
+Read: 	* ID ("name" "Dovecot")
+  	4 OK ID completed (0.001 + 0.000 secs).
+
+Host2: QUOTA capability found, presented in raw IMAP on next lines
+Sending: 5 GETQUOTAROOT INBOX
+Sent 22 bytes
+Read: 	* QUOTAROOT INBOX "Storage quota"
+  	* QUOTA "Storage quota" (STORAGE 22 1048576 MESSAGE 1 15000)
+  	5 OK Getquotaroot completed (0.002 + 0.000 + 0.001 secs).
+
+Host2: Quota current storage is 22528 bytes. Limit is 1073741824 bytes. So 0.00 % full
+Host1: Compression is off. Use --compress1 to allow compression on host1
+Host2: Compression is off. Use --compress2 to allow compression on host2
+Compression often generates annoying errors, especially with SSL connexions, Gmail, Office365. So, avoid it.
+Host1: found 8 folders.
+Host2: found 5 folders.
+Host1: guessing separator from folder listing: [.]
+Host1: separator given by NAMESPACE: [.]
+Host2: guessing separator from folder listing: [.]
+Host2: separator given by NAMESPACE: [.]
+Host1: guessing prefix from folder listing: [INBOX.]
+Host1: prefix given by NAMESPACE: [INBOX.]
+Host2: guessing prefix from folder listing: [INBOX.]
+Host2: prefix given by NAMESPACE: [INBOX.]
+Host1: separator and prefix: [.][INBOX.]
+Host2: separator and prefix: [.][INBOX.]
+Including all folders found by default. Use --subscribed or --folder or --folderrec or --include to select specific folders. Use --exclude to unselect specific folders.
+Host1: Checking wanted folders exist. Use --nocheckfoldersexist to avoid this check (shared of public namespace targeted).
+Host1: Checking wanted folders are selectable. Use --nocheckselectable to avoid this check.
+Turned off automapping folders ( use --automap to turn on automapping )
+
+++++ Listing folders
+All foldernames are presented between brackets like [X] where X is the foldername.
+When a foldername contains non-ASCII characters it is presented in the form
+[X] = [Y] where
+X is the imap foldername you have to use in command line options and
+Y is the utf8 output just printed for convenience, to recognize it.
+
+Host1: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasChildren) "." INBOX
+* LIST (\HasNoChildren \UnMarked) "." INBOX.spam
+* LIST (\HasNoChildren \UnMarked) "." INBOX.Trash
+* LIST (\HasNoChildren \UnMarked) "." INBOX.Sent
+* LIST (\HasNoChildren \UnMarked) "." INBOX.Junk
+* LIST (\HasNoChildren \UnMarked) "." INBOX.Drafts
+* LIST (\HasNoChildren \UnMarked) "." INBOX.Archive
+* LIST (\HasNoChildren \UnMarked \Junk) "." INBOX.Spam
+17 OK List completed (0.001 + 0.000 secs).
+
+[INBOX]
+[INBOX.Archive]
+[INBOX.Drafts]
+[INBOX.Junk]
+[INBOX.Sent]
+[INBOX.Spam]
+[INBOX.Trash]
+[INBOX.spam]
+
+Host2: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasChildren) "." INBOX
+* LIST (\HasNoChildren \Drafts) "." INBOX.Drafts
+* LIST (\HasNoChildren \Junk) "." INBOX.Junk
+* LIST (\HasNoChildren \Sent) "." INBOX.Sent
+* LIST (\HasNoChildren \Trash) "." INBOX.Trash
+10 OK List completed (0.001 + 0.000 secs).
+
+[INBOX]
+[INBOX.Drafts]
+[INBOX.Junk]
+[INBOX.Sent]
+[INBOX.Trash]
+
+Checking SEARCH ALL works on both accounts. To avoid that check, use --nochecknoabletosearch
+Host1: checking if SEARCH ALL works on INBOX
+Host1: folder [INBOX] has 438 messages mentioned by SELECT
+Host1: folder [INBOX] has 438 messages found by SEARCH ALL
+Host1: folder [INBOX] has the same messages count (438) by SELECT and SEARCH ALL
+Host2: checking if SEARCH ALL works on INBOX
+Host2: folder [INBOX] has 1 messages mentioned by SELECT
+Host2: folder [INBOX] has 1 messages found by SEARCH ALL
+Host2: folder [INBOX] has the same messages count (1) by SELECT and SEARCH ALL
+Good! SEARCH ALL works on both accounts.
+
+Folders sizes before the synchronization. It can take some time. Be patient.
+You can remove foldersizes listings by using "--nofoldersizes" and "--nofoldersizesatend"
+but then you will also lose the ETA (Estimation Time of Arrival) given after each message copy.
+Host1 folder     1/8 [INBOX]                             Size:  61218748 Messages:   438 Biggest:  23351112
+Host2 folder     1/8 [INBOX]                             Size:     21686 Messages:     1 Biggest:     21686
+Host2-Host1                                                    -61197062            -437          -23329426
+
+Host1 folder     2/8 [INBOX.Archive]                     Size:         0 Messages:     0 Biggest:         0
+Host2 folder     2/8 [INBOX.Archive]                      does not exist yet
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     3/8 [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host2 folder     3/8 [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     4/8 [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder     4/8 [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     5/8 [INBOX.Sent]                        Size:   5417500 Messages:     3 Biggest:   4993718
+Host2 folder     5/8 [INBOX.Sent]                        Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                     -5417500              -3           -4993718
+
+Host1 folder     6/8 [INBOX.Spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder     6/8 [INBOX.Spam]                         does not exist yet
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     7/8 [INBOX.Trash]                       Size:    428517 Messages:    12 Biggest:     83551
+Host2 folder     7/8 [INBOX.Trash]                       Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                      -428517             -12             -83551
+
+Host1 folder     8/8 [INBOX.spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder     8/8 [INBOX.spam]                         does not exist yet
+Host2-Host1                                                            0               0                  0
+
+Host1 Nb folders:                     8 folders
+Host2 Nb folders:                     8 folders
+
+Host1 Nb messages:                  453 messages
+Host2 Nb messages:                    1 messages
+
+Host1 Total size:              67064765 bytes (63.958 MiB)
+Host2 Total size:                 21686 bytes (21.178 KiB)
+
+Host1 Biggest message:         23351112 bytes (22.269 MiB)
+Host2 Biggest message:            21686 bytes (21.178 KiB)
+
+Time spent on sizing:        14.2 seconds
+++++ Looping on each one of 8 folders to sync
+ETA: Monday 16 September 2024-09-16 12:29:41 Hora Padrão Brasil Central  0 s  453/453 msgs left
+Folder     1/8 [INBOX]                             -> [INBOX]                            
+Host1: folder [INBOX] has 438 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] has 1 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] permanentflags: 
+Host1: folder [INBOX] considering 438 messages
+Host2: folder [INBOX] considering 1 messages
+Host1: folder [INBOX] selected 438 messages, duplicates 0
+Host2: folder [INBOX] selected 1 messages, duplicates 0
+msg INBOX/7998 {16892}        copied to INBOX/2          0.29 msgs/s  4.854 KiB/s 16.496 KiB copied ETA: Monday 16 September 2024-09-16 12:55:21 Hora Padrão Brasil Central  1536 s  452/453 msgs left
+msg INBOX/7999 {26974}        copied to INBOX/3          0.49 msgs/s  10.475 KiB/s 42.838 KiB copied ETA: Monday 16 September 2024-09-16 12:45:07 Hora Padrão Brasil Central  922 s  451/453 msgs left
+msg INBOX/8000 {85567}        copied to INBOX/4          0.61 msgs/s  25.741 KiB/s 126.399 KiB copied ETA: Monday 16 September 2024-09-16 12:42:03 Hora Padrão Brasil Central  737 s  450/453 msgs left
+msg INBOX/8001 {28059}        copied to INBOX/5          0.72 msgs/s  27.603 KiB/s 153.801 KiB copied ETA: Monday 16 September 2024-09-16 12:40:12 Hora Padrão Brasil Central  625 s  449/453 msgs left
+msg INBOX/8002 {7297}         copied to INBOX/6          0.81 msgs/s  26.070 KiB/s 160.927 KiB copied ETA: Monday 16 September 2024-09-16 12:39:00 Hora Padrão Brasil Central  553 s  448/453 msgs left
+msg INBOX/8003 {18164}        copied to INBOX/7          0.88 msgs/s  26.171 KiB/s 178.665 KiB copied ETA: Monday 16 September 2024-09-16 12:38:17 Hora Padrão Brasil Central  509 s  447/453 msgs left
+msg INBOX/8004 {20574}        copied to INBOX/8          0.94 msgs/s  26.561 KiB/s 198.757 KiB copied ETA: Monday 16 September 2024-09-16 12:37:45 Hora Padrão Brasil Central  477 s  446/453 msgs left
+msg INBOX/8005 {10378}        copied to INBOX/9          0.99 msgs/s  25.849 KiB/s 208.892 KiB copied ETA: Monday 16 September 2024-09-16 12:37:19 Hora Padrão Brasil Central  450 s  445/453 msgs left
+msg INBOX/8006 {10685}        copied to INBOX/10         1.04 msgs/s  25.265 KiB/s 219.326 KiB copied ETA: Monday 16 September 2024-09-16 12:36:58 Hora Padrão Brasil Central  428 s  444/453 msgs left
+msg INBOX/8007 {40778}        copied to INBOX/11         1.07 msgs/s  27.689 KiB/s 259.148 KiB copied ETA: Monday 16 September 2024-09-16 12:36:45 Hora Padrão Brasil Central  415 s  443/453 msgs left
+msg INBOX/8008 {33143}        copied to INBOX/12         1.09 msgs/s  29.002 KiB/s 291.515 KiB copied ETA: Monday 16 September 2024-09-16 12:36:35 Hora Padrão Brasil Central  404 s  442/453 msgs left
+msg INBOX/8009 {43538}        copied to INBOX/13         1.11 msgs/s  31.014 KiB/s 334.032 KiB copied ETA: Monday 16 September 2024-09-16 12:36:28 Hora Padrão Brasil Central  396 s  441/453 msgs left
+msg INBOX/8010 {65244}        copied to INBOX/14         1.13 msgs/s  34.549 KiB/s 397.747 KiB copied ETA: Monday 16 September 2024-09-16 12:36:22 Hora Padrão Brasil Central  390 s  440/453 msgs left
+msg INBOX/8011 {27994}        copied to INBOX/15         1.15 msgs/s  34.922 KiB/s 425.085 KiB copied ETA: Monday 16 September 2024-09-16 12:36:15 Hora Padrão Brasil Central  382 s  439/453 msgs left
+msg INBOX/8012 {33722}        copied to INBOX/16         1.17 msgs/s  35.600 KiB/s 458.017 KiB copied ETA: Monday 16 September 2024-09-16 12:36:10 Hora Padrão Brasil Central  376 s  438/453 msgs left
+msg INBOX/8013 {19532}        copied to INBOX/17         1.18 msgs/s  35.273 KiB/s 477.091 KiB copied ETA: Monday 16 September 2024-09-16 12:36:04 Hora Padrão Brasil Central  369 s  437/453 msgs left
+msg INBOX/8014 {73829}        copied to INBOX/18         1.19 msgs/s  38.500 KiB/s 549.189 KiB copied ETA: Monday 16 September 2024-09-16 12:36:01 Hora Padrão Brasil Central  366 s  436/453 msgs left
+msg INBOX/8015 {5386}         copied to INBOX/19         1.21 msgs/s  37.305 KiB/s 554.449 KiB copied ETA: Monday 16 September 2024-09-16 12:35:55 Hora Padrão Brasil Central  359 s  435/453 msgs left
+msg INBOX/8016 {19658}        copied to INBOX/20         1.22 msgs/s  36.961 KiB/s 573.646 KiB copied ETA: Monday 16 September 2024-09-16 12:35:51 Hora Padrão Brasil Central  355 s  434/453 msgs left
+msg INBOX/8017 {25025}        copied to INBOX/21         1.24 msgs/s  36.980 KiB/s 598.085 KiB copied ETA: Monday 16 September 2024-09-16 12:35:47 Hora Padrão Brasil Central  350 s  433/453 msgs left
+msg INBOX/8018 {33636}        copied to INBOX/22         1.25 msgs/s  37.427 KiB/s 630.933 KiB copied ETA: Monday 16 September 2024-09-16 12:35:45 Hora Padrão Brasil Central  347 s  432/453 msgs left
+msg INBOX/8019 {26358}        copied to INBOX/23         1.26 msgs/s  37.491 KiB/s 656.673 KiB copied ETA: Monday 16 September 2024-09-16 12:35:42 Hora Padrão Brasil Central  343 s  431/453 msgs left
+msg INBOX/8020 {28049}        copied to INBOX/24         1.27 msgs/s  37.634 KiB/s 684.064 KiB copied ETA: Monday 16 September 2024-09-16 12:35:39 Hora Padrão Brasil Central  340 s  430/453 msgs left
+msg INBOX/8021 {74782}        copied to INBOX/25         1.26 msgs/s  39.851 KiB/s 757.094 KiB copied ETA: Monday 16 September 2024-09-16 12:35:40 Hora Padrão Brasil Central  340 s  429/453 msgs left
+msg INBOX/8022 {141707}       copied to INBOX/26         1.26 msgs/s  45.192 KiB/s 895.479 KiB copied ETA: Monday 16 September 2024-09-16 12:35:40 Hora Padrão Brasil Central  339 s  428/453 msgs left
+msg INBOX/8023 {8437}         copied to INBOX/27         1.27 msgs/s  44.228 KiB/s 903.719 KiB copied ETA: Monday 16 September 2024-09-16 12:35:37 Hora Padrão Brasil Central  336 s  427/453 msgs left
+msg INBOX/8024 {6892}         copied to INBOX/28         1.28 msgs/s  43.162 KiB/s 910.449 KiB copied ETA: Monday 16 September 2024-09-16 12:35:35 Hora Padrão Brasil Central  333 s  426/453 msgs left
+msg INBOX/8025 {9125}         copied to INBOX/29         1.29 msgs/s  42.310 KiB/s 919.360 KiB copied ETA: Monday 16 September 2024-09-16 12:35:33 Hora Padrão Brasil Central  330 s  425/453 msgs left
+msg INBOX/8026 {19804}        copied to INBOX/30         1.29 msgs/s  41.864 KiB/s 938.700 KiB copied ETA: Monday 16 September 2024-09-16 12:35:31 Hora Padrão Brasil Central  328 s  424/453 msgs left
+msg INBOX/8027 {5688}         copied to INBOX/31         1.30 msgs/s  41.013 KiB/s 944.255 KiB copied ETA: Monday 16 September 2024-09-16 12:35:29 Hora Padrão Brasil Central  325 s  423/453 msgs left
+msg INBOX/8028 {72211}        copied to INBOX/32         1.31 msgs/s  42.725 KiB/s 0.991 MiB copied ETA: Monday 16 September 2024-09-16 12:35:28 Hora Padrão Brasil Central  323 s  422/453 msgs left
+msg INBOX/8029 {14159}        copied to INBOX/33         1.31 msgs/s  42.175 KiB/s 1.004 MiB copied ETA: Monday 16 September 2024-09-16 12:35:26 Hora Padrão Brasil Central  321 s  421/453 msgs left
+msg INBOX/8030 {7371}         copied to INBOX/34         1.32 msgs/s  41.437 KiB/s 1.012 MiB copied ETA: Monday 16 September 2024-09-16 12:35:24 Hora Padrão Brasil Central  318 s  420/453 msgs left
+msg INBOX/8031 {71449}        copied to INBOX/35         1.32 msgs/s  42.975 KiB/s 1.080 MiB copied ETA: Monday 16 September 2024-09-16 12:35:24 Hora Padrão Brasil Central  317 s  419/453 msgs left
+msg INBOX/8032 {71234}        copied to INBOX/36         1.32 msgs/s  44.448 KiB/s 1.148 MiB copied ETA: Monday 16 September 2024-09-16 12:35:23 Hora Padrão Brasil Central  316 s  418/453 msgs left
+msg INBOX/8033 {41554}        copied to INBOX/37         1.33 msgs/s  44.843 KiB/s 1.187 MiB copied ETA: Monday 16 September 2024-09-16 12:35:22 Hora Padrão Brasil Central  314 s  417/453 msgs left
+msg INBOX/8034 {85759}        copied to INBOX/38         1.33 msgs/s  46.656 KiB/s 1.269 MiB copied ETA: Monday 16 September 2024-09-16 12:35:22 Hora Padrão Brasil Central  313 s  416/453 msgs left
+msg INBOX/8035 {27988}        copied to INBOX/39         1.33 msgs/s  46.535 KiB/s 1.296 MiB copied ETA: Monday 16 September 2024-09-16 12:35:21 Hora Padrão Brasil Central  311 s  415/453 msgs left
+msg INBOX/8036 {53016}        copied to INBOX/40         1.33 msgs/s  47.167 KiB/s 1.346 MiB copied ETA: Monday 16 September 2024-09-16 12:35:21 Hora Padrão Brasil Central  310 s  414/453 msgs left
+msg INBOX/8037 {79280}        copied to INBOX/41         1.34 msgs/s  48.596 KiB/s 1.422 MiB copied ETA: Monday 16 September 2024-09-16 12:35:20 Hora Padrão Brasil Central  309 s  413/453 msgs left
+msg INBOX/8038 {55661}        copied to INBOX/42         1.34 msgs/s  49.304 KiB/s 1.475 MiB copied ETA: Monday 16 September 2024-09-16 12:35:20 Hora Padrão Brasil Central  308 s  412/453 msgs left
+msg INBOX/8039 {92100}        copied to INBOX/43         1.34 msgs/s  51.009 KiB/s 1.563 MiB copied ETA: Monday 16 September 2024-09-16 12:35:19 Hora Padrão Brasil Central  307 s  411/453 msgs left
+msg INBOX/8040 {3988}         copied to INBOX/44         1.35 msgs/s  50.189 KiB/s 1.567 MiB copied ETA: Monday 16 September 2024-09-16 12:35:18 Hora Padrão Brasil Central  305 s  410/453 msgs left
+msg INBOX/8041 {7256}         copied to INBOX/45         1.35 msgs/s  49.480 KiB/s 1.574 MiB copied ETA: Monday 16 September 2024-09-16 12:35:16 Hora Padrão Brasil Central  303 s  409/453 msgs left
+msg INBOX/8042 {6111}         copied to INBOX/46         1.36 msgs/s  48.758 KiB/s 1.579 MiB copied ETA: Monday 16 September 2024-09-16 12:35:15 Hora Padrão Brasil Central  301 s  408/453 msgs left
+msg INBOX/8043 {5936}         copied to INBOX/47         1.36 msgs/s  48.063 KiB/s 1.585 MiB copied ETA: Monday 16 September 2024-09-16 12:35:14 Hora Padrão Brasil Central  299 s  407/453 msgs left
+msg INBOX/8044 {6085}         copied to INBOX/48         1.37 msgs/s  47.373 KiB/s 1.591 MiB copied ETA: Monday 16 September 2024-09-16 12:35:12 Hora Padrão Brasil Central  297 s  406/453 msgs left
+msg INBOX/8045 {16701}        copied to INBOX/49         1.37 msgs/s  46.916 KiB/s 1.607 MiB copied ETA: Monday 16 September 2024-09-16 12:35:12 Hora Padrão Brasil Central  296 s  405/453 msgs left
+msg INBOX/8046 {16669}        copied to INBOX/50         1.37 msgs/s  46.479 KiB/s 1.623 MiB copied ETA: Monday 16 September 2024-09-16 12:35:12 Hora Padrão Brasil Central  295 s  404/453 msgs left
+msg INBOX/8047 {16668}        copied to INBOX/51         1.37 msgs/s  46.036 KiB/s 1.639 MiB copied ETA: Monday 16 September 2024-09-16 12:35:11 Hora Padrão Brasil Central  294 s  403/453 msgs left
+msg INBOX/8048 {28019}        copied to INBOX/52         1.37 msgs/s  45.954 KiB/s 1.665 MiB copied ETA: Monday 16 September 2024-09-16 12:35:11 Hora Padrão Brasil Central  292 s  402/453 msgs left
+msg INBOX/8049 {35835}        copied to INBOX/53         1.38 msgs/s  46.072 KiB/s 1.699 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  291 s  401/453 msgs left
+msg INBOX/8050 {5227}         copied to INBOX/54         1.38 msgs/s  45.490 KiB/s 1.704 MiB copied ETA: Monday 16 September 2024-09-16 12:35:09 Hora Padrão Brasil Central  290 s  400/453 msgs left
+msg INBOX/8051 {46759}        copied to INBOX/55         1.38 msgs/s  45.837 KiB/s 1.749 MiB copied ETA: Monday 16 September 2024-09-16 12:35:09 Hora Padrão Brasil Central  289 s  399/453 msgs left
+msg INBOX/8052 {34717}        copied to INBOX/56         1.38 msgs/s  45.941 KiB/s 1.782 MiB copied ETA: Monday 16 September 2024-09-16 12:35:08 Hora Padrão Brasil Central  287 s  398/453 msgs left
+msg INBOX/8053 {85575}        copied to INBOX/57         1.38 msgs/s  47.171 KiB/s 1.864 MiB copied ETA: Monday 16 September 2024-09-16 12:35:08 Hora Padrão Brasil Central  287 s  397/453 msgs left
+msg INBOX/8054 {39966}        copied to INBOX/58         1.39 msgs/s  47.354 KiB/s 1.902 MiB copied ETA: Monday 16 September 2024-09-16 12:35:08 Hora Padrão Brasil Central  286 s  396/453 msgs left
+msg INBOX/8055 {21414}        copied to INBOX/59         1.39 msgs/s  47.096 KiB/s 1.922 MiB copied ETA: Monday 16 September 2024-09-16 12:35:08 Hora Padrão Brasil Central  285 s  395/453 msgs left
+msg INBOX/8056 {9196}         copied to INBOX/60         1.39 msgs/s  46.640 KiB/s 1.931 MiB copied ETA: Monday 16 September 2024-09-16 12:35:07 Hora Padrão Brasil Central  283 s  394/453 msgs left
+msg INBOX/8057 {60616}        copied to INBOX/61         1.39 msgs/s  47.232 KiB/s 1.989 MiB copied ETA: Monday 16 September 2024-09-16 12:35:07 Hora Padrão Brasil Central  282 s  393/453 msgs left
+msg INBOX/8058 {34974}        copied to INBOX/62         1.39 msgs/s  47.295 KiB/s 2.022 MiB copied ETA: Monday 16 September 2024-09-16 12:35:06 Hora Padrão Brasil Central  281 s  392/453 msgs left
+msg INBOX/8059 {32604}        copied to INBOX/63         1.40 msgs/s  47.311 KiB/s 2.053 MiB copied ETA: Monday 16 September 2024-09-16 12:35:06 Hora Padrão Brasil Central  280 s  391/453 msgs left
+msg INBOX/8060 {31670}        copied to INBOX/64         1.40 msgs/s  47.288 KiB/s 2.083 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  279 s  390/453 msgs left
+msg INBOX/8061 {42578}        copied to INBOX/65         1.40 msgs/s  47.468 KiB/s 2.124 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  279 s  389/453 msgs left
+msg INBOX/8062 {23333}        copied to INBOX/66         1.40 msgs/s  47.293 KiB/s 2.146 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  277 s  388/453 msgs left
+msg INBOX/8063 {28166}        copied to INBOX/67         1.40 msgs/s  47.218 KiB/s 2.173 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  276 s  387/453 msgs left
+msg INBOX/8064 {39868}        copied to INBOX/68         1.40 msgs/s  47.375 KiB/s 2.211 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  275 s  386/453 msgs left
+msg INBOX/8065 {18145}        copied to INBOX/69         1.40 msgs/s  47.102 KiB/s 2.229 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  274 s  385/453 msgs left
+msg INBOX/8066 {29367}        copied to INBOX/70         1.41 msgs/s  47.053 KiB/s 2.257 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  273 s  384/453 msgs left
+msg INBOX/8067 {22250}        copied to INBOX/71         1.41 msgs/s  46.875 KiB/s 2.278 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  272 s  383/453 msgs left
+msg INBOX/8068 {19534}        copied to INBOX/72         1.41 msgs/s  46.632 KiB/s 2.296 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  271 s  382/453 msgs left
+msg INBOX/8069 {30185}        copied to INBOX/73         1.41 msgs/s  46.599 KiB/s 2.325 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  270 s  381/453 msgs left
+msg INBOX/8070 {28153}        copied to INBOX/74         1.41 msgs/s  46.534 KiB/s 2.352 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  269 s  380/453 msgs left
+msg INBOX/8071 {13748}        copied to INBOX/75         1.41 msgs/s  46.214 KiB/s 2.365 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  268 s  379/453 msgs left
+msg INBOX/8072 {28077}        copied to INBOX/76         1.41 msgs/s  46.154 KiB/s 2.392 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  267 s  378/453 msgs left
+msg INBOX/8073 {31924}        copied to INBOX/77         1.41 msgs/s  46.162 KiB/s 2.422 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  267 s  377/453 msgs left
+msg INBOX/8074 {6981}         copied to INBOX/78         1.42 msgs/s  45.775 KiB/s 2.429 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  265 s  376/453 msgs left
+msg INBOX/8075 {53145}        copied to INBOX/79         1.42 msgs/s  46.126 KiB/s 2.480 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  265 s  375/453 msgs left
+msg INBOX/8076 {34451}        copied to INBOX/80         1.42 msgs/s  46.175 KiB/s 2.513 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  264 s  374/453 msgs left
+msg INBOX/8077 {23680}        copied to INBOX/81         1.42 msgs/s  46.051 KiB/s 2.535 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  263 s  373/453 msgs left
+msg INBOX/8078 {13813}        copied to INBOX/82         1.42 msgs/s  45.797 KiB/s 2.548 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  262 s  372/453 msgs left
+msg INBOX/8079 {23710}        copied to INBOX/83         1.42 msgs/s  45.664 KiB/s 2.571 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  261 s  371/453 msgs left
+msg INBOX/8080 {35046}        copied to INBOX/84         1.42 msgs/s  45.732 KiB/s 2.604 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  260 s  370/453 msgs left
+msg INBOX/8081 {100779}       copied to INBOX/85         1.42 msgs/s  46.787 KiB/s 2.700 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  260 s  369/453 msgs left
+msg INBOX/8082 {40457}        copied to INBOX/86         1.42 msgs/s  46.903 KiB/s 2.739 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  259 s  368/453 msgs left
+msg INBOX/8083 {142329}       copied to INBOX/87         1.42 msgs/s  48.562 KiB/s 2.875 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  259 s  367/453 msgs left
+msg INBOX/8084 {51316}        copied to INBOX/88         1.42 msgs/s  48.850 KiB/s 2.924 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  258 s  366/453 msgs left
+msg INBOX/8085 {28122}        copied to INBOX/89         1.42 msgs/s  48.774 KiB/s 2.951 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  257 s  365/453 msgs left
+msg INBOX/8086 {95553}        copied to INBOX/90         1.42 msgs/s  49.687 KiB/s 3.042 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  256 s  364/453 msgs left
+msg INBOX/8087 {30056}        copied to INBOX/91         1.42 msgs/s  49.637 KiB/s 3.070 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  255 s  363/453 msgs left
+msg INBOX/8088 {9502}         copied to INBOX/92         1.42 msgs/s  49.318 KiB/s 3.079 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  254 s  362/453 msgs left
+msg INBOX/8089 {27164}        copied to INBOX/93         1.42 msgs/s  49.220 KiB/s 3.105 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  254 s  361/453 msgs left
+msg INBOX/8090 {37398}        copied to INBOX/94         1.42 msgs/s  49.277 KiB/s 3.141 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  253 s  360/453 msgs left
+msg INBOX/8091 {12952}        copied to INBOX/95         1.43 msgs/s  49.007 KiB/s 3.153 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  252 s  359/453 msgs left
+msg INBOX/8092 {28133}        copied to INBOX/96         1.43 msgs/s  48.941 KiB/s 3.180 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  251 s  358/453 msgs left
+msg INBOX/8093 {79088}        copied to INBOX/97         1.43 msgs/s  49.555 KiB/s 3.256 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  250 s  357/453 msgs left
+msg INBOX/8094 {7675}         copied to INBOX/98         1.43 msgs/s  49.224 KiB/s 3.263 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  249 s  356/453 msgs left
+msg INBOX/8095 {15337}        copied to INBOX/99         1.43 msgs/s  48.979 KiB/s 3.277 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  248 s  355/453 msgs left
+msg INBOX/8096 {6507}         copied to INBOX/100        1.43 msgs/s  48.641 KiB/s 3.284 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  247 s  354/453 msgs left
+msg INBOX/8097 {85456}        copied to INBOX/101        1.43 msgs/s  49.324 KiB/s 3.365 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  247 s  353/453 msgs left
+msg INBOX/8098 {85603}        copied to INBOX/102        1.43 msgs/s  49.996 KiB/s 3.447 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  246 s  352/453 msgs left
+msg INBOX/8099 {30185}        copied to INBOX/103        1.43 msgs/s  49.950 KiB/s 3.476 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  245 s  351/453 msgs left
+msg INBOX/8100 {66658}        copied to INBOX/104        1.43 msgs/s  50.343 KiB/s 3.539 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  245 s  350/453 msgs left
+msg INBOX/8101 {25271}        copied to INBOX/105        1.43 msgs/s  50.229 KiB/s 3.563 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  244 s  349/453 msgs left
+msg INBOX/8102 {73825}        copied to INBOX/106        1.43 msgs/s  50.712 KiB/s 3.634 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  243 s  348/453 msgs left
+msg INBOX/8103 {13990}        copied to INBOX/107        1.43 msgs/s  50.478 KiB/s 3.647 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  242 s  347/453 msgs left
+msg INBOX/8104 {13826}        copied to INBOX/108        1.43 msgs/s  50.221 KiB/s 3.660 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  241 s  346/453 msgs left
+msg INBOX/8105 {13949}        copied to INBOX/109        1.43 msgs/s  49.950 KiB/s 3.674 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  241 s  345/453 msgs left
+msg INBOX/8106 {13930}        copied to INBOX/110        1.44 msgs/s  49.707 KiB/s 3.687 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  240 s  344/453 msgs left
+msg INBOX/8107 {13726}        copied to INBOX/111        1.44 msgs/s  49.489 KiB/s 3.700 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  239 s  343/453 msgs left
+msg INBOX/8108 {23351112}     copied to INBOX/112        1.36 msgs/s  324.833 KiB/s 25.969 MiB copied ETA: Monday 16 September 2024-09-16 12:35:15 Hora Padrão Brasil Central  252 s  342/453 msgs left
+msg INBOX/8109 {30555}        copied to INBOX/113        1.36 msgs/s  322.592 KiB/s 25.998 MiB copied ETA: Monday 16 September 2024-09-16 12:35:15 Hora Padrão Brasil Central  251 s  341/453 msgs left
+msg INBOX/8110 {85005}        copied to INBOX/114        1.36 msgs/s  320.853 KiB/s 26.079 MiB copied ETA: Monday 16 September 2024-09-16 12:35:15 Hora Padrão Brasil Central  250 s  340/453 msgs left
+msg INBOX/8111 {40580}        copied to INBOX/115        1.36 msgs/s  318.752 KiB/s 26.118 MiB copied ETA: Monday 16 September 2024-09-16 12:35:14 Hora Padrão Brasil Central  250 s  339/453 msgs left
+msg INBOX/8112 {24927}        copied to INBOX/116        1.36 msgs/s  316.609 KiB/s 26.142 MiB copied ETA: Monday 16 September 2024-09-16 12:35:14 Hora Padrão Brasil Central  249 s  338/453 msgs left
+msg INBOX/8113 {28065}        copied to INBOX/117        1.36 msgs/s  314.514 KiB/s 26.169 MiB copied ETA: Monday 16 September 2024-09-16 12:35:14 Hora Padrão Brasil Central  248 s  337/453 msgs left
+msg INBOX/8114 {10351}        copied to INBOX/118        1.36 msgs/s  312.429 KiB/s 26.179 MiB copied ETA: Monday 16 September 2024-09-16 12:35:13 Hora Padrão Brasil Central  246 s  336/453 msgs left
+msg INBOX/8115 {8249}         copied to INBOX/119        1.37 msgs/s  310.351 KiB/s 26.186 MiB copied ETA: Monday 16 September 2024-09-16 12:35:13 Hora Padrão Brasil Central  245 s  335/453 msgs left
+msg INBOX/8116 {16784}        copied to INBOX/120        1.37 msgs/s  308.061 KiB/s 26.202 MiB copied ETA: Monday 16 September 2024-09-16 12:35:13 Hora Padrão Brasil Central  244 s  334/453 msgs left
+msg INBOX/8117 {15531}        copied to INBOX/121        1.37 msgs/s  305.955 KiB/s 26.217 MiB copied ETA: Monday 16 September 2024-09-16 12:35:12 Hora Padrão Brasil Central  243 s  333/453 msgs left
+msg INBOX/8118 {19524}        copied to INBOX/122        1.37 msgs/s  303.928 KiB/s 26.236 MiB copied ETA: Monday 16 September 2024-09-16 12:35:12 Hora Padrão Brasil Central  243 s  332/453 msgs left
+msg INBOX/8119 {12493}        copied to INBOX/123        1.37 msgs/s  302.030 KiB/s 26.248 MiB copied ETA: Monday 16 September 2024-09-16 12:35:11 Hora Padrão Brasil Central  241 s  331/453 msgs left
+msg INBOX/8120 {30195}        copied to INBOX/124        1.37 msgs/s  300.175 KiB/s 26.277 MiB copied ETA: Monday 16 September 2024-09-16 12:35:11 Hora Padrão Brasil Central  240 s  330/453 msgs left
+msg INBOX/8121 {73828}        copied to INBOX/125        1.37 msgs/s  298.641 KiB/s 26.347 MiB copied ETA: Monday 16 September 2024-09-16 12:35:11 Hora Padrão Brasil Central  240 s  329/453 msgs left
+msg INBOX/8122 {82064}        copied to INBOX/126        1.37 msgs/s  297.067 KiB/s 26.425 MiB copied ETA: Monday 16 September 2024-09-16 12:35:11 Hora Padrão Brasil Central  239 s  328/453 msgs left
+msg INBOX/8123 {16595}        copied to INBOX/127        1.37 msgs/s  295.183 KiB/s 26.441 MiB copied ETA: Monday 16 September 2024-09-16 12:35:11 Hora Padrão Brasil Central  238 s  327/453 msgs left
+msg INBOX/8124 {16689}        copied to INBOX/128        1.37 msgs/s  293.132 KiB/s 26.457 MiB copied ETA: Monday 16 September 2024-09-16 12:35:11 Hora Padrão Brasil Central  237 s  326/453 msgs left
+msg INBOX/8125 {28000}        copied to INBOX/129        1.38 msgs/s  291.375 KiB/s 26.484 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  236 s  325/453 msgs left
+msg INBOX/8126 {16746}        copied to INBOX/130        1.38 msgs/s  289.325 KiB/s 26.500 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  236 s  324/453 msgs left
+msg INBOX/8127 {16685}        copied to INBOX/131        1.38 msgs/s  287.392 KiB/s 26.516 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  235 s  323/453 msgs left
+msg INBOX/8128 {34030}        copied to INBOX/132        1.38 msgs/s  285.643 KiB/s 26.548 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  234 s  322/453 msgs left
+msg INBOX/8129 {47612}        copied to INBOX/133        1.38 msgs/s  284.068 KiB/s 26.593 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  233 s  321/453 msgs left
+msg INBOX/8130 {75054}        copied to INBOX/134        1.38 msgs/s  282.754 KiB/s 26.665 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  232 s  320/453 msgs left
+msg INBOX/8131 {15263}        copied to INBOX/135        1.38 msgs/s  281.166 KiB/s 26.680 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  231 s  319/453 msgs left
+msg INBOX/8132 {82136}        copied to INBOX/136        1.38 msgs/s  279.850 KiB/s 26.758 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  231 s  318/453 msgs left
+msg INBOX/8133 {25455}        copied to INBOX/137        1.38 msgs/s  278.120 KiB/s 26.782 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  230 s  317/453 msgs left
+msg INBOX/8134 {141682}       copied to INBOX/138        1.38 msgs/s  277.372 KiB/s 26.917 MiB copied ETA: Monday 16 September 2024-09-16 12:35:10 Hora Padrão Brasil Central  229 s  316/453 msgs left
+msg INBOX/8135 {86090}        copied to INBOX/139        1.38 msgs/s  276.368 KiB/s 26.999 MiB copied ETA: Monday 16 September 2024-09-16 12:35:09 Hora Padrão Brasil Central  228 s  315/453 msgs left
+msg INBOX/8136 {28116}        copied to INBOX/140        1.38 msgs/s  274.868 KiB/s 27.026 MiB copied ETA: Monday 16 September 2024-09-16 12:35:09 Hora Padrão Brasil Central  227 s  314/453 msgs left
+msg INBOX/8137 {15577}        copied to INBOX/141        1.38 msgs/s  273.279 KiB/s 27.041 MiB copied ETA: Monday 16 September 2024-09-16 12:35:09 Hora Padrão Brasil Central  227 s  313/453 msgs left
+msg INBOX/8138 {131935}       copied to INBOX/142        1.38 msgs/s  272.405 KiB/s 27.167 MiB copied ETA: Monday 16 September 2024-09-16 12:35:09 Hora Padrão Brasil Central  226 s  312/453 msgs left
+msg INBOX/8139 {58003}        copied to INBOX/143        1.38 msgs/s  271.224 KiB/s 27.222 MiB copied ETA: Monday 16 September 2024-09-16 12:35:09 Hora Padrão Brasil Central  225 s  311/453 msgs left
+msg INBOX/8140 {8358}         copied to INBOX/144        1.38 msgs/s  269.721 KiB/s 27.230 MiB copied ETA: Monday 16 September 2024-09-16 12:35:09 Hora Padrão Brasil Central  224 s  310/453 msgs left
+msg INBOX/8141 {285782}       copied to INBOX/145        1.38 msgs/s  270.294 KiB/s 27.503 MiB copied ETA: Monday 16 September 2024-09-16 12:35:09 Hora Padrão Brasil Central  224 s  309/453 msgs left
+msg INBOX/8142 {140541}       copied to INBOX/146        1.38 msgs/s  269.894 KiB/s 27.637 MiB copied ETA: Monday 16 September 2024-09-16 12:35:09 Hora Padrão Brasil Central  223 s  308/453 msgs left
+msg INBOX/8143 {20016}        copied to INBOX/147        1.38 msgs/s  268.561 KiB/s 27.656 MiB copied ETA: Monday 16 September 2024-09-16 12:35:08 Hora Padrão Brasil Central  222 s  307/453 msgs left
+msg INBOX/8144 {18691}        copied to INBOX/148        1.39 msgs/s  267.097 KiB/s 27.674 MiB copied ETA: Monday 16 September 2024-09-16 12:35:08 Hora Padrão Brasil Central  221 s  306/453 msgs left
+msg INBOX/8145 {30165}        copied to INBOX/149        1.39 msgs/s  265.739 KiB/s 27.702 MiB copied ETA: Monday 16 September 2024-09-16 12:35:08 Hora Padrão Brasil Central  220 s  305/453 msgs left
+msg INBOX/8146 {22087}        copied to INBOX/150        1.39 msgs/s  264.327 KiB/s 27.724 MiB copied ETA: Monday 16 September 2024-09-16 12:35:08 Hora Padrão Brasil Central  219 s  304/453 msgs left
+msg INBOX/8147 {55661}        copied to INBOX/151        1.39 msgs/s  263.126 KiB/s 27.777 MiB copied ETA: Monday 16 September 2024-09-16 12:35:08 Hora Padrão Brasil Central  218 s  303/453 msgs left
+msg INBOX/8148 {8784}         copied to INBOX/152        1.39 msgs/s  261.744 KiB/s 27.785 MiB copied ETA: Monday 16 September 2024-09-16 12:35:07 Hora Padrão Brasil Central  217 s  302/453 msgs left
+msg INBOX/8149 {38847}        copied to INBOX/153        1.39 msgs/s  260.533 KiB/s 27.822 MiB copied ETA: Monday 16 September 2024-09-16 12:35:07 Hora Padrão Brasil Central  217 s  301/453 msgs left
+msg INBOX/8150 {157963}       copied to INBOX/154        1.39 msgs/s  260.098 KiB/s 27.973 MiB copied ETA: Monday 16 September 2024-09-16 12:35:07 Hora Padrão Brasil Central  216 s  300/453 msgs left
+msg INBOX/8151 {85544}        copied to INBOX/155        1.39 msgs/s  259.323 KiB/s 28.054 MiB copied ETA: Monday 16 September 2024-09-16 12:35:07 Hora Padrão Brasil Central  215 s  299/453 msgs left
+msg INBOX/8152 {27940}        copied to INBOX/156        1.39 msgs/s  258.067 KiB/s 28.081 MiB copied ETA: Monday 16 September 2024-09-16 12:35:07 Hora Padrão Brasil Central  214 s  298/453 msgs left
+msg INBOX/8153 {8860}         copied to INBOX/157        1.39 msgs/s  256.744 KiB/s 28.089 MiB copied ETA: Monday 16 September 2024-09-16 12:35:06 Hora Padrão Brasil Central  213 s  297/453 msgs left
+msg INBOX/8154 {12305}        copied to INBOX/158        1.39 msgs/s  255.485 KiB/s 28.101 MiB copied ETA: Monday 16 September 2024-09-16 12:35:06 Hora Padrão Brasil Central  212 s  296/453 msgs left
+msg INBOX/8155 {27968}        copied to INBOX/159        1.39 msgs/s  254.268 KiB/s 28.128 MiB copied ETA: Monday 16 September 2024-09-16 12:35:06 Hora Padrão Brasil Central  211 s  295/453 msgs left
+msg INBOX/8156 {65677}        copied to INBOX/160        1.39 msgs/s  253.002 KiB/s 28.190 MiB copied ETA: Monday 16 September 2024-09-16 12:35:06 Hora Padrão Brasil Central  211 s  294/453 msgs left
+msg INBOX/8157 {36457}        copied to INBOX/161        1.39 msgs/s  251.870 KiB/s 28.225 MiB copied ETA: Monday 16 September 2024-09-16 12:35:06 Hora Padrão Brasil Central  210 s  293/453 msgs left
+msg INBOX/8158 {15180}        copied to INBOX/162        1.40 msgs/s  250.600 KiB/s 28.240 MiB copied ETA: Monday 16 September 2024-09-16 12:35:06 Hora Padrão Brasil Central  209 s  292/453 msgs left
+msg INBOX/8159 {4999}         copied to INBOX/163        1.40 msgs/s  249.350 KiB/s 28.244 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  208 s  291/453 msgs left
+msg INBOX/8160 {25504}        copied to INBOX/164        1.40 msgs/s  248.176 KiB/s 28.269 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  208 s  290/453 msgs left
+msg INBOX/8161 {44116}        copied to INBOX/165        1.40 msgs/s  247.067 KiB/s 28.311 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  207 s  289/453 msgs left
+msg INBOX/8162 {84367}        copied to INBOX/166        1.40 msgs/s  246.290 KiB/s 28.391 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  206 s  288/453 msgs left
+msg INBOX/8164 {4000}         copied to INBOX/167        1.40 msgs/s  245.090 KiB/s 28.395 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  205 s  287/453 msgs left
+msg INBOX/8165 {3890}         copied to INBOX/168        1.40 msgs/s  243.899 KiB/s 28.399 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  204 s  286/453 msgs left
+msg INBOX/8166 {15549}        copied to INBOX/169        1.40 msgs/s  242.676 KiB/s 28.414 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  203 s  285/453 msgs left
+msg INBOX/8167 {10503}        copied to INBOX/170        1.40 msgs/s  241.547 KiB/s 28.424 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  202 s  284/453 msgs left
+msg INBOX/8168 {14194}        copied to INBOX/171        1.40 msgs/s  240.409 KiB/s 28.437 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  202 s  283/453 msgs left
+msg INBOX/8169 {28042}        copied to INBOX/172        1.40 msgs/s  239.264 KiB/s 28.464 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  201 s  282/453 msgs left
+msg INBOX/8170 {60623}        copied to INBOX/173        1.40 msgs/s  238.382 KiB/s 28.522 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  200 s  281/453 msgs left
+msg INBOX/8171 {10766}        copied to INBOX/174        1.41 msgs/s  237.303 KiB/s 28.532 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  199 s  280/453 msgs left
+msg INBOX/8172 {34290}        copied to INBOX/175        1.41 msgs/s  236.323 KiB/s 28.565 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  198 s  279/453 msgs left
+msg INBOX/8173 {19493}        copied to INBOX/176        1.41 msgs/s  235.245 KiB/s 28.583 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  198 s  278/453 msgs left
+msg INBOX/8174 {36026}        copied to INBOX/177        1.41 msgs/s  234.293 KiB/s 28.618 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  197 s  277/453 msgs left
+msg INBOX/8175 {16748}        copied to INBOX/178        1.41 msgs/s  233.127 KiB/s 28.634 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  196 s  276/453 msgs left
+msg INBOX/8176 {16802}        copied to INBOX/179        1.41 msgs/s  232.002 KiB/s 28.650 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  195 s  275/453 msgs left
+msg INBOX/8177 {15477}        copied to INBOX/180        1.41 msgs/s  230.948 KiB/s 28.664 MiB copied ETA: Monday 16 September 2024-09-16 12:35:03 Hora Padrão Brasil Central  195 s  274/453 msgs left
+msg INBOX/8178 {4871}         copied to INBOX/181        1.41 msgs/s  229.907 KiB/s 28.669 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  194 s  273/453 msgs left
+msg INBOX/8179 {4787}         copied to INBOX/182        1.41 msgs/s  228.878 KiB/s 28.674 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  193 s  272/453 msgs left
+msg INBOX/8180 {20749}        copied to INBOX/183        1.41 msgs/s  227.883 KiB/s 28.693 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  192 s  271/453 msgs left
+msg INBOX/8181 {28098}        copied to INBOX/184        1.41 msgs/s  226.954 KiB/s 28.720 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  191 s  270/453 msgs left
+msg INBOX/8182 {79492}        copied to INBOX/185        1.41 msgs/s  226.330 KiB/s 28.796 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  190 s  269/453 msgs left
+msg INBOX/8183 {28054}        copied to INBOX/186        1.41 msgs/s  225.416 KiB/s 28.823 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  190 s  268/453 msgs left
+msg INBOX/8184 {31897}        copied to INBOX/187        1.41 msgs/s  224.529 KiB/s 28.853 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  189 s  267/453 msgs left
+msg INBOX/8185 {8356}         copied to INBOX/188        1.41 msgs/s  223.580 KiB/s 28.861 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  188 s  266/453 msgs left
+msg INBOX/8186 {57366}        copied to INBOX/189        1.41 msgs/s  222.819 KiB/s 28.916 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  187 s  265/453 msgs left
+msg INBOX/8187 {101451}       copied to INBOX/190        1.41 msgs/s  222.369 KiB/s 29.013 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  187 s  264/453 msgs left
+msg INBOX/8188 {141432}       copied to INBOX/191        1.41 msgs/s  222.208 KiB/s 29.147 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  186 s  263/453 msgs left
+msg INBOX/8189 {31471}        copied to INBOX/192        1.42 msgs/s  221.364 KiB/s 29.177 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  185 s  262/453 msgs left
+msg INBOX/8190 {85685}        copied to INBOX/193        1.42 msgs/s  220.812 KiB/s 29.259 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  184 s  261/453 msgs left
+msg INBOX/8191 {17615}        copied to INBOX/194        1.42 msgs/s  219.901 KiB/s 29.276 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  184 s  260/453 msgs left
+msg INBOX/8192 {28031}        copied to INBOX/195        1.42 msgs/s  219.038 KiB/s 29.303 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  183 s  259/453 msgs left
+msg INBOX/8193 {15184}        copied to INBOX/196        1.42 msgs/s  218.109 KiB/s 29.317 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  182 s  258/453 msgs left
+msg INBOX/8194 {100008}       copied to INBOX/197        1.42 msgs/s  217.695 KiB/s 29.413 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  181 s  257/453 msgs left
+msg INBOX/8195 {9757}         copied to INBOX/198        1.42 msgs/s  216.832 KiB/s 29.422 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  181 s  256/453 msgs left
+msg INBOX/8196 {3951}         copied to INBOX/199        1.42 msgs/s  215.923 KiB/s 29.426 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  180 s  255/453 msgs left
+msg INBOX/8197 {7154}         copied to INBOX/200        1.42 msgs/s  215.041 KiB/s 29.432 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  179 s  254/453 msgs left
+msg INBOX/8198 {5974}         copied to INBOX/201        1.42 msgs/s  214.142 KiB/s 29.438 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  178 s  253/453 msgs left
+msg INBOX/8199 {6003}         copied to INBOX/202        1.42 msgs/s  213.283 KiB/s 29.444 MiB copied ETA: Monday 16 September 2024-09-16 12:35:00 Hora Padrão Brasil Central  177 s  252/453 msgs left
+msg INBOX/8200 {5890}         copied to INBOX/203        1.42 msgs/s  212.425 KiB/s 29.450 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  176 s  251/453 msgs left
+msg INBOX/8201 {4282}         copied to INBOX/204        1.42 msgs/s  211.562 KiB/s 29.454 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  176 s  250/453 msgs left
+msg INBOX/8202 {5887}         copied to INBOX/205        1.42 msgs/s  210.720 KiB/s 29.459 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  175 s  249/453 msgs left
+msg INBOX/8203 {5941}         copied to INBOX/206        1.43 msgs/s  209.881 KiB/s 29.465 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  174 s  248/453 msgs left
+msg INBOX/8204 {51383}        copied to INBOX/207        1.43 msgs/s  209.209 KiB/s 29.514 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  173 s  247/453 msgs left
+msg INBOX/8205 {28087}        copied to INBOX/208        1.43 msgs/s  208.439 KiB/s 29.541 MiB copied ETA: Monday 16 September 2024-09-16 12:34:59 Hora Padrão Brasil Central  172 s  246/453 msgs left
+msg INBOX/8206 {7726}         copied to INBOX/209        1.43 msgs/s  207.622 KiB/s 29.548 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  172 s  245/453 msgs left
+msg INBOX/8207 {77406}        copied to INBOX/210        1.43 msgs/s  207.140 KiB/s 29.622 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  171 s  244/453 msgs left
+msg INBOX/8208 {133390}       copied to INBOX/211        1.43 msgs/s  207.026 KiB/s 29.749 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  170 s  243/453 msgs left
+msg INBOX/8209 {7969}         copied to INBOX/212        1.43 msgs/s  206.112 KiB/s 29.757 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  170 s  242/453 msgs left
+msg INBOX/8210 {85522}        copied to INBOX/213        1.43 msgs/s  205.696 KiB/s 29.838 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  169 s  241/453 msgs left
+msg INBOX/8211 {9110}         copied to INBOX/214        1.43 msgs/s  204.923 KiB/s 29.847 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  168 s  240/453 msgs left
+msg INBOX/8212 {11015}        copied to INBOX/215        1.43 msgs/s  204.170 KiB/s 29.857 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  167 s  239/453 msgs left
+msg INBOX/8213 {11004}        copied to INBOX/216        1.43 msgs/s  203.417 KiB/s 29.868 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  166 s  238/453 msgs left
+msg INBOX/8214 {14061}        copied to INBOX/217        1.43 msgs/s  202.693 KiB/s 29.881 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  166 s  237/453 msgs left
+msg INBOX/8215 {31680}        copied to INBOX/218        1.43 msgs/s  202.028 KiB/s 29.912 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  165 s  236/453 msgs left
+msg INBOX/8216 {60681}        copied to INBOX/219        1.43 msgs/s  201.475 KiB/s 29.969 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  164 s  235/453 msgs left
+msg INBOX/8217 {108789}       copied to INBOX/220        1.43 msgs/s  201.242 KiB/s 30.073 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  164 s  234/453 msgs left
+msg INBOX/8218 {83749}        copied to INBOX/221        1.43 msgs/s  200.803 KiB/s 30.153 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  163 s  233/453 msgs left
+msg INBOX/8219 {71260}        copied to INBOX/222        1.43 msgs/s  200.389 KiB/s 30.221 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  162 s  232/453 msgs left
+msg INBOX/8220 {71299}        copied to INBOX/223        1.43 msgs/s  199.922 KiB/s 30.289 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  161 s  231/453 msgs left
+msg INBOX/8221 {63035}        copied to INBOX/224        1.43 msgs/s  199.453 KiB/s 30.349 MiB copied ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  161 s  230/453 msgs left
+msg INBOX/8222 {28054}        copied to INBOX/225        1.43 msgs/s  198.804 KiB/s 30.376 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  160 s  229/453 msgs left
+msg INBOX/8223 {16765}        copied to INBOX/226        1.43 msgs/s  198.040 KiB/s 30.392 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  159 s  228/453 msgs left
+msg INBOX/8224 {16793}        copied to INBOX/227        1.43 msgs/s  197.295 KiB/s 30.408 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  159 s  227/453 msgs left
+msg INBOX/8225 {60858}        copied to INBOX/228        1.43 msgs/s  196.788 KiB/s 30.466 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  158 s  226/453 msgs left
+msg INBOX/8226 {10382}        copied to INBOX/229        1.43 msgs/s  196.090 KiB/s 30.476 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  157 s  225/453 msgs left
+msg INBOX/8227 {12399}        copied to INBOX/230        1.43 msgs/s  195.428 KiB/s 30.488 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  156 s  224/453 msgs left
+msg INBOX/8228 {12895}        copied to INBOX/231        1.43 msgs/s  194.782 KiB/s 30.500 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  155 s  223/453 msgs left
+msg INBOX/8229 {19840}        copied to INBOX/232        1.43 msgs/s  194.115 KiB/s 30.519 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  155 s  222/453 msgs left
+msg INBOX/8230 {33532}        copied to INBOX/233        1.43 msgs/s  193.481 KiB/s 30.551 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  154 s  221/453 msgs left
+msg INBOX/8231 {27979}        copied to INBOX/234        1.44 msgs/s  192.869 KiB/s 30.577 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  153 s  220/453 msgs left
+msg INBOX/8232 {88632}        copied to INBOX/235        1.44 msgs/s  192.563 KiB/s 30.662 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  153 s  219/453 msgs left
+msg INBOX/8233 {28137}        copied to INBOX/236        1.44 msgs/s  191.964 KiB/s 30.689 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  152 s  218/453 msgs left
+msg INBOX/8234 {34492}        copied to INBOX/237        1.44 msgs/s  191.410 KiB/s 30.722 MiB copied ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  151 s  217/453 msgs left
+msg INBOX/8235 {28089}        copied to INBOX/238        1.44 msgs/s  190.813 KiB/s 30.749 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  150 s  216/453 msgs left
+msg INBOX/8236 {8234}         copied to INBOX/239        1.44 msgs/s  190.166 KiB/s 30.756 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  150 s  215/453 msgs left
+msg INBOX/8237 {78926}        copied to INBOX/240        1.44 msgs/s  189.826 KiB/s 30.832 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  149 s  214/453 msgs left
+msg INBOX/8238 {9944}         copied to INBOX/241        1.44 msgs/s  189.195 KiB/s 30.841 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  148 s  213/453 msgs left
+msg INBOX/8239 {142563}       copied to INBOX/242        1.44 msgs/s  189.155 KiB/s 30.977 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  148 s  212/453 msgs left
+msg INBOX/8240 {8383}         copied to INBOX/243        1.44 msgs/s  188.531 KiB/s 30.985 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  147 s  211/453 msgs left
+msg INBOX/8241 {84407}        copied to INBOX/244        1.44 msgs/s  188.222 KiB/s 31.066 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  146 s  210/453 msgs left
+msg INBOX/8242 {33691}        copied to INBOX/245        1.44 msgs/s  187.654 KiB/s 31.098 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  145 s  209/453 msgs left
+msg INBOX/8243 {62599}        copied to INBOX/246        1.44 msgs/s  187.228 KiB/s 31.157 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  145 s  208/453 msgs left
+msg INBOX/8244 {15199}        copied to INBOX/247        1.44 msgs/s  186.644 KiB/s 31.172 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  144 s  207/453 msgs left
+msg INBOX/8245 {11017}        copied to INBOX/248        1.44 msgs/s  186.050 KiB/s 31.182 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  143 s  206/453 msgs left
+msg INBOX/8246 {11066}        copied to INBOX/249        1.44 msgs/s  185.465 KiB/s 31.193 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  142 s  205/453 msgs left
+msg INBOX/8247 {10918}        copied to INBOX/250        1.44 msgs/s  184.882 KiB/s 31.203 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  142 s  204/453 msgs left
+msg INBOX/8248 {14292}        copied to INBOX/251        1.44 msgs/s  184.280 KiB/s 31.217 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  141 s  203/453 msgs left
+msg INBOX/8249 {13533}        copied to INBOX/252        1.44 msgs/s  183.719 KiB/s 31.230 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  140 s  202/453 msgs left
+msg INBOX/8250 {11020}        copied to INBOX/253        1.44 msgs/s  183.147 KiB/s 31.240 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  139 s  201/453 msgs left
+msg INBOX/8251 {10948}        copied to INBOX/254        1.44 msgs/s  182.580 KiB/s 31.251 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  139 s  200/453 msgs left
+msg INBOX/8252 {107054}       copied to INBOX/255        1.44 msgs/s  182.400 KiB/s 31.353 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  138 s  199/453 msgs left
+msg INBOX/8253 {47297}        copied to INBOX/256        1.44 msgs/s  181.986 KiB/s 31.398 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  137 s  198/453 msgs left
+msg INBOX/8254 {28063}        copied to INBOX/257        1.44 msgs/s  181.466 KiB/s 31.425 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  136 s  197/453 msgs left
+msg INBOX/8255 {3842}         copied to INBOX/258        1.44 msgs/s  180.879 KiB/s 31.428 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  136 s  196/453 msgs left
+msg INBOX/8256 {81351}        copied to INBOX/259        1.44 msgs/s  180.596 KiB/s 31.506 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  135 s  195/453 msgs left
+msg INBOX/8257 {58384}        copied to INBOX/260        1.44 msgs/s  180.241 KiB/s 31.562 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  134 s  194/453 msgs left
+msg INBOX/8258 {8839}         copied to INBOX/261        1.45 msgs/s  179.688 KiB/s 31.570 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  134 s  193/453 msgs left
+msg INBOX/8259 {11041}        copied to INBOX/262        1.45 msgs/s  179.154 KiB/s 31.581 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  133 s  192/453 msgs left
+msg INBOX/8260 {85521}        copied to INBOX/263        1.45 msgs/s  178.909 KiB/s 31.662 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  132 s  191/453 msgs left
+msg INBOX/8261 {4097}         copied to INBOX/264        1.45 msgs/s  178.346 KiB/s 31.666 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  131 s  190/453 msgs left
+msg INBOX/8262 {28084}        copied to INBOX/265        1.45 msgs/s  177.863 KiB/s 31.693 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  131 s  189/453 msgs left
+msg INBOX/8263 {60344}        copied to INBOX/266        1.45 msgs/s  177.501 KiB/s 31.751 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  130 s  188/453 msgs left
+msg INBOX/8264 {10925}        copied to INBOX/267        1.45 msgs/s  176.979 KiB/s 31.761 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  129 s  187/453 msgs left
+msg INBOX/8265 {10905}        copied to INBOX/268        1.45 msgs/s  176.451 KiB/s 31.771 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  128 s  186/453 msgs left
+msg INBOX/8266 {5296}         copied to INBOX/269        1.45 msgs/s  175.906 KiB/s 31.776 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  128 s  185/453 msgs left
+msg INBOX/8267 {28063}        copied to INBOX/270        1.45 msgs/s  175.430 KiB/s 31.803 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  127 s  184/453 msgs left
+msg INBOX/8268 {15217}        copied to INBOX/271        1.45 msgs/s  174.901 KiB/s 31.818 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  126 s  183/453 msgs left
+msg INBOX/8269 {39664}        copied to INBOX/272        1.45 msgs/s  174.478 KiB/s 31.855 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  126 s  182/453 msgs left
+msg INBOX/8270 {12731}        copied to INBOX/273        1.45 msgs/s  173.989 KiB/s 31.868 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  125 s  181/453 msgs left
+msg INBOX/8271 {28090}        copied to INBOX/274        1.45 msgs/s  173.535 KiB/s 31.894 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  124 s  180/453 msgs left
+msg INBOX/8272 {6201}         copied to INBOX/275        1.45 msgs/s  173.020 KiB/s 31.900 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  123 s  179/453 msgs left
+msg INBOX/8273 {32682}        copied to INBOX/276        1.45 msgs/s  172.591 KiB/s 31.931 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  123 s  178/453 msgs left
+msg INBOX/8274 {4235}         copied to INBOX/277        1.45 msgs/s  172.073 KiB/s 31.936 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  122 s  177/453 msgs left
+msg INBOX/8275 {43232}        copied to INBOX/278        1.45 msgs/s  171.704 KiB/s 31.977 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  121 s  176/453 msgs left
+msg INBOX/8276 {28150}        copied to INBOX/279        1.45 msgs/s  171.217 KiB/s 32.004 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  120 s  175/453 msgs left
+msg INBOX/8277 {8236}         copied to INBOX/280        1.45 msgs/s  170.587 KiB/s 32.011 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  120 s  174/453 msgs left
+msg INBOX/8278 {72622}        copied to INBOX/281        1.45 msgs/s  170.327 KiB/s 32.081 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  119 s  173/453 msgs left
+msg INBOX/8279 {33156}        copied to INBOX/282        1.45 msgs/s  169.889 KiB/s 32.112 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  118 s  172/453 msgs left
+msg INBOX/8280 {43737}        copied to INBOX/283        1.45 msgs/s  169.499 KiB/s 32.154 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  118 s  171/453 msgs left
+msg INBOX/8281 {38561}        copied to INBOX/284        1.45 msgs/s  169.118 KiB/s 32.191 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  117 s  170/453 msgs left
+msg INBOX/8282 {142215}       copied to INBOX/285        1.45 msgs/s  169.177 KiB/s 32.326 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  116 s  169/453 msgs left
+msg INBOX/8283 {59532}        copied to INBOX/286        1.45 msgs/s  168.910 KiB/s 32.383 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  116 s  168/453 msgs left
+msg INBOX/8284 {86663}        copied to INBOX/287        1.45 msgs/s  168.737 KiB/s 32.466 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  115 s  167/453 msgs left
+msg INBOX/8285 {15057}        copied to INBOX/288        1.45 msgs/s  168.275 KiB/s 32.480 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  114 s  166/453 msgs left
+msg INBOX/8286 {4255}         copied to INBOX/289        1.45 msgs/s  167.789 KiB/s 32.484 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  114 s  165/453 msgs left
+msg INBOX/8287 {28000}        copied to INBOX/290        1.45 msgs/s  167.378 KiB/s 32.511 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  113 s  164/453 msgs left
+msg INBOX/8288 {105135}       copied to INBOX/291        1.45 msgs/s  167.271 KiB/s 32.611 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  112 s  163/453 msgs left
+msg INBOX/8289 {34247}        copied to INBOX/292        1.45 msgs/s  166.885 KiB/s 32.644 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  112 s  162/453 msgs left
+msg INBOX/8290 {35270}        copied to INBOX/293        1.45 msgs/s  166.514 KiB/s 32.678 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  111 s  161/453 msgs left
+msg INBOX/8292 {9142}         copied to INBOX/294        1.45 msgs/s  166.067 KiB/s 32.686 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  110 s  160/453 msgs left
+msg INBOX/8293 {27995}        copied to INBOX/295        1.45 msgs/s  165.666 KiB/s 32.713 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  109 s  159/453 msgs left
+msg INBOX/8295 {38296}        copied to INBOX/296        1.45 msgs/s  165.305 KiB/s 32.749 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  109 s  158/453 msgs left
+msg INBOX/8296 {30771}        copied to INBOX/297        1.45 msgs/s  164.709 KiB/s 32.779 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  108 s  157/453 msgs left
+msg INBOX/8297 {4037}         copied to INBOX/298        1.45 msgs/s  164.144 KiB/s 32.783 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  107 s  156/453 msgs left
+msg INBOX/8298 {26414}        copied to INBOX/299        1.45 msgs/s  163.745 KiB/s 32.808 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  107 s  155/453 msgs left
+msg INBOX/8299 {33995}        copied to INBOX/300        1.45 msgs/s  163.340 KiB/s 32.840 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  106 s  154/453 msgs left
+msg INBOX/8300 {52421}        copied to INBOX/301        1.45 msgs/s  163.027 KiB/s 32.890 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  105 s  153/453 msgs left
+msg INBOX/8301 {85518}        copied to INBOX/302        1.45 msgs/s  162.874 KiB/s 32.972 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  105 s  152/453 msgs left
+msg INBOX/8302 {22814}        copied to INBOX/303        1.45 msgs/s  162.474 KiB/s 32.994 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  104 s  151/453 msgs left
+msg INBOX/8303 {28079}        copied to INBOX/304        1.45 msgs/s  162.098 KiB/s 33.020 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  103 s  150/453 msgs left
+msg INBOX/8304 {86211}        copied to INBOX/305        1.45 msgs/s  161.953 KiB/s 33.103 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  103 s  149/453 msgs left
+msg INBOX/8305 {4937}         copied to INBOX/306        1.45 msgs/s  161.516 KiB/s 33.107 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  102 s  148/453 msgs left
+msg INBOX/8306 {28128}        copied to INBOX/307        1.45 msgs/s  161.144 KiB/s 33.134 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  101 s  147/453 msgs left
+msg INBOX/8307 {4880}         copied to INBOX/308        1.45 msgs/s  160.700 KiB/s 33.139 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  100 s  146/453 msgs left
+msg INBOX/8308 {9633}         copied to INBOX/309        1.45 msgs/s  160.289 KiB/s 33.148 MiB copied ETA: Monday 16 September 2024-09-16 12:34:53 Hora Padrão Brasil Central  100 s  145/453 msgs left
+msg INBOX/8309 {28037}        copied to INBOX/310        1.45 msgs/s  159.916 KiB/s 33.175 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  99 s  144/453 msgs left
+msg INBOX/8310 {11210}        copied to INBOX/311        1.46 msgs/s  159.514 KiB/s 33.185 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  98 s  143/453 msgs left
+msg INBOX/8311 {28037}        copied to INBOX/312        1.46 msgs/s  159.152 KiB/s 33.212 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  98 s  142/453 msgs left
+msg INBOX/8312 {25326}        copied to INBOX/313        1.46 msgs/s  158.782 KiB/s 33.236 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  97 s  141/453 msgs left
+msg INBOX/8313 {5204}         copied to INBOX/314        1.46 msgs/s  158.364 KiB/s 33.241 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  96 s  140/453 msgs left
+msg INBOX/8315 {28068}        copied to INBOX/315        1.46 msgs/s  158.009 KiB/s 33.268 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  95 s  139/453 msgs left
+msg INBOX/8316 {39363}        copied to INBOX/316        1.46 msgs/s  157.709 KiB/s 33.306 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  95 s  138/453 msgs left
+msg INBOX/8321 {141523}       copied to INBOX/317        1.46 msgs/s  157.758 KiB/s 33.441 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  94 s  137/453 msgs left
+msg INBOX/8322 {27382}        copied to INBOX/318        1.46 msgs/s  157.447 KiB/s 33.467 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  93 s  136/453 msgs left
+msg INBOX/8323 {5957}         copied to INBOX/319        1.46 msgs/s  157.042 KiB/s 33.472 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  93 s  135/453 msgs left
+msg INBOX/8324 {5867}         copied to INBOX/320        1.46 msgs/s  156.626 KiB/s 33.478 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  92 s  134/453 msgs left
+msg INBOX/8325 {5834}         copied to INBOX/321        1.46 msgs/s  156.224 KiB/s 33.483 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  91 s  133/453 msgs left
+msg INBOX/8326 {82083}        copied to INBOX/322        1.46 msgs/s  156.054 KiB/s 33.562 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  91 s  132/453 msgs left
+msg INBOX/8327 {8235}         copied to INBOX/323        1.46 msgs/s  155.667 KiB/s 33.570 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  90 s  131/453 msgs left
+msg INBOX/8328 {30149}        copied to INBOX/324        1.46 msgs/s  155.319 KiB/s 33.598 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  89 s  130/453 msgs left
+msg INBOX/8329 {49948}        copied to INBOX/325        1.46 msgs/s  154.895 KiB/s 33.646 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  89 s  129/453 msgs left
+msg INBOX/8330 {14100}        copied to INBOX/326        1.46 msgs/s  154.499 KiB/s 33.659 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  88 s  128/453 msgs left
+msg INBOX/8331 {10132}        copied to INBOX/327        1.46 msgs/s  154.127 KiB/s 33.669 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  87 s  127/453 msgs left
+msg INBOX/8332 {29982}        copied to INBOX/328        1.46 msgs/s  153.804 KiB/s 33.698 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  86 s  126/453 msgs left
+msg INBOX/8333 {143676}       copied to INBOX/329        1.46 msgs/s  153.894 KiB/s 33.835 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  86 s  125/453 msgs left
+msg INBOX/8334 {9797}         copied to INBOX/330        1.46 msgs/s  153.525 KiB/s 33.844 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  85 s  124/453 msgs left
+msg INBOX/8335 {14624}        copied to INBOX/331        1.46 msgs/s  153.135 KiB/s 33.858 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  84 s  123/453 msgs left
+msg INBOX/8336 {91953}        copied to INBOX/332        1.46 msgs/s  153.040 KiB/s 33.946 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  84 s  122/453 msgs left
+msg INBOX/8337 {28069}        copied to INBOX/333        1.46 msgs/s  152.720 KiB/s 33.972 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  83 s  121/453 msgs left
+msg INBOX/8338 {31130}        copied to INBOX/334        1.46 msgs/s  152.362 KiB/s 34.002 MiB copied ETA: Monday 16 September 2024-09-16 12:34:52 Hora Padrão Brasil Central  82 s  120/453 msgs left
+msg INBOX/8339 {21836595}     copied to INBOX/335        1.44 msgs/s  241.710 KiB/s 54.827 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  83 s  119/453 msgs left
+msg INBOX/8340 {64730}        copied to INBOX/336        1.44 msgs/s  241.251 KiB/s 54.889 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  82 s  118/453 msgs left
+msg INBOX/8341 {82031}        copied to INBOX/337        1.44 msgs/s  240.821 KiB/s 54.967 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  81 s  117/453 msgs left
+msg INBOX/8342 {103454}       copied to INBOX/338        1.44 msgs/s  240.530 KiB/s 55.066 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  81 s  116/453 msgs left
+msg INBOX/8343 {7941}         copied to INBOX/339        1.44 msgs/s  239.950 KiB/s 55.073 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  80 s  115/453 msgs left
+msg INBOX/8344 {85428}        copied to INBOX/340        1.44 msgs/s  239.575 KiB/s 55.155 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  79 s  114/453 msgs left
+msg INBOX/8349 {9566}         copied to INBOX/341        1.44 msgs/s  239.009 KiB/s 55.164 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  79 s  113/453 msgs left
+msg INBOX/8350 {28271}        copied to INBOX/342        1.44 msgs/s  238.463 KiB/s 55.191 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  78 s  112/453 msgs left
+msg INBOX/8351 {87100}        copied to INBOX/343        1.44 msgs/s  238.110 KiB/s 55.274 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  77 s  111/453 msgs left
+msg INBOX/8352 {27962}        copied to INBOX/344        1.44 msgs/s  237.564 KiB/s 55.301 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  76 s  110/453 msgs left
+msg INBOX/8353 {15509}        copied to INBOX/345        1.44 msgs/s  236.990 KiB/s 55.315 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  76 s  109/453 msgs left
+msg INBOX/8354 {12528}        copied to INBOX/346        1.44 msgs/s  236.366 KiB/s 55.327 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  75 s  108/453 msgs left
+msg INBOX/8355 {4701}         copied to INBOX/347        1.44 msgs/s  235.795 KiB/s 55.332 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  74 s  107/453 msgs left
+msg INBOX/8356 {20573}        copied to INBOX/348        1.44 msgs/s  235.171 KiB/s 55.351 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  74 s  106/453 msgs left
+msg INBOX/8357 {30208}        copied to INBOX/349        1.44 msgs/s  234.654 KiB/s 55.380 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  73 s  105/453 msgs left
+msg INBOX/8358 {30336}        copied to INBOX/350        1.44 msgs/s  234.145 KiB/s 55.409 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  72 s  104/453 msgs left
+msg INBOX/8359 {15087}        copied to INBOX/351        1.44 msgs/s  233.580 KiB/s 55.424 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  72 s  103/453 msgs left
+msg INBOX/8360 {26305}        copied to INBOX/352        1.44 msgs/s  233.060 KiB/s 55.449 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  71 s  102/453 msgs left
+msg INBOX/8361 {28112}        copied to INBOX/353        1.44 msgs/s  232.543 KiB/s 55.476 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  70 s  101/453 msgs left
+msg INBOX/8362 {34459}        copied to INBOX/354        1.44 msgs/s  232.057 KiB/s 55.508 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  69 s  100/453 msgs left
+msg INBOX/8363 {76519}        copied to INBOX/355        1.44 msgs/s  231.560 KiB/s 55.581 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  69 s  99/453 msgs left
+msg INBOX/8364 {6320}         copied to INBOX/356        1.44 msgs/s  230.962 KiB/s 55.587 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  68 s  98/453 msgs left
+msg INBOX/8365 {120629}       copied to INBOX/357        1.44 msgs/s  230.721 KiB/s 55.702 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  67 s  97/453 msgs left
+msg INBOX/8366 {120872}       copied to INBOX/358        1.44 msgs/s  230.535 KiB/s 55.818 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  67 s  96/453 msgs left
+msg INBOX/8367 {4751}         copied to INBOX/359        1.44 msgs/s  229.995 KiB/s 55.822 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  66 s  95/453 msgs left
+msg INBOX/8368 {8670}         copied to INBOX/360        1.44 msgs/s  229.479 KiB/s 55.830 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  65 s  94/453 msgs left
+msg INBOX/8369 {47610}        copied to INBOX/361        1.44 msgs/s  229.028 KiB/s 55.876 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  65 s  93/453 msgs left
+msg INBOX/8370 {88891}        copied to INBOX/362        1.44 msgs/s  228.728 KiB/s 55.961 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  64 s  92/453 msgs left
+msg INBOX/8371 {27388}        copied to INBOX/363        1.44 msgs/s  228.112 KiB/s 55.987 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  63 s  91/453 msgs left
+msg INBOX/8372 {6275}         copied to INBOX/364        1.44 msgs/s  227.500 KiB/s 55.993 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  62 s  90/453 msgs left
+msg INBOX/8373 {32456}        copied to INBOX/365        1.44 msgs/s  227.002 KiB/s 56.024 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  62 s  89/453 msgs left
+msg INBOX/8374 {44989}        copied to INBOX/366        1.44 msgs/s  226.542 KiB/s 56.067 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  61 s  88/453 msgs left
+msg INBOX/8375 {89851}        copied to INBOX/367        1.44 msgs/s  226.238 KiB/s 56.152 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  60 s  87/453 msgs left
+msg INBOX/8376 {40157}        copied to INBOX/368        1.44 msgs/s  225.812 KiB/s 56.191 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  60 s  86/453 msgs left
+msg INBOX/8377 {14296}        copied to INBOX/369        1.44 msgs/s  225.338 KiB/s 56.204 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  59 s  85/453 msgs left
+msg INBOX/8378 {28131}        copied to INBOX/370        1.44 msgs/s  224.869 KiB/s 56.231 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  58 s  84/453 msgs left
+msg INBOX/8379 {43859}        copied to INBOX/371        1.44 msgs/s  224.428 KiB/s 56.273 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  58 s  83/453 msgs left
+msg INBOX/8380 {94806}        copied to INBOX/372        1.44 msgs/s  223.932 KiB/s 56.363 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  57 s  82/453 msgs left
+msg INBOX/8381 {59420}        copied to INBOX/373        1.44 msgs/s  223.492 KiB/s 56.420 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  56 s  81/453 msgs left
+msg INBOX/8382 {28266}        copied to INBOX/374        1.44 msgs/s  223.034 KiB/s 56.447 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  56 s  80/453 msgs left
+msg INBOX/8383 {29673}        copied to INBOX/375        1.44 msgs/s  222.583 KiB/s 56.475 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  55 s  79/453 msgs left
+msg INBOX/8384 {12529}        copied to INBOX/376        1.44 msgs/s  222.113 KiB/s 56.487 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  54 s  78/453 msgs left
+msg INBOX/8385 {55469}        copied to INBOX/377        1.44 msgs/s  221.719 KiB/s 56.540 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  53 s  77/453 msgs left
+msg INBOX/8386 {53546}        copied to INBOX/378        1.44 msgs/s  221.306 KiB/s 56.591 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  53 s  76/453 msgs left
+msg INBOX/8387 {85419}        copied to INBOX/379        1.44 msgs/s  221.014 KiB/s 56.673 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  52 s  75/453 msgs left
+msg INBOX/8388 {8616}         copied to INBOX/380        1.44 msgs/s  220.460 KiB/s 56.681 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  51 s  74/453 msgs left
+msg INBOX/8389 {32469}        copied to INBOX/381        1.44 msgs/s  219.920 KiB/s 56.712 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  51 s  73/453 msgs left
+msg INBOX/8390 {341075}       copied to INBOX/382        1.44 msgs/s  220.459 KiB/s 57.037 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  50 s  72/453 msgs left
+msg INBOX/8391 {28099}        copied to INBOX/383        1.44 msgs/s  220.060 KiB/s 57.064 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  49 s  71/453 msgs left
+msg INBOX/8392 {3567}         copied to INBOX/384        1.44 msgs/s  219.582 KiB/s 57.067 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  49 s  70/453 msgs left
+msg INBOX/8393 {21714}        copied to INBOX/385        1.44 msgs/s  219.118 KiB/s 57.088 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  48 s  69/453 msgs left
+msg INBOX/8394 {49104}        copied to INBOX/386        1.44 msgs/s  218.725 KiB/s 57.135 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  47 s  68/453 msgs left
+msg INBOX/8395 {264855}       copied to INBOX/387        1.44 msgs/s  218.996 KiB/s 57.387 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  47 s  67/453 msgs left
+msg INBOX/8397 {96216}        copied to INBOX/388        1.44 msgs/s  218.794 KiB/s 57.479 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  46 s  66/453 msgs left
+msg INBOX/8398 {96216}        copied to INBOX/389        1.44 msgs/s  218.550 KiB/s 57.571 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  45 s  65/453 msgs left
+msg INBOX/8399 {22913}        copied to INBOX/390        1.44 msgs/s  218.137 KiB/s 57.593 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  44 s  64/453 msgs left
+msg INBOX/8400 {27981}        copied to INBOX/391        1.44 msgs/s  217.710 KiB/s 57.619 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  44 s  63/453 msgs left
+msg INBOX/8401 {50798}        copied to INBOX/392        1.44 msgs/s  217.330 KiB/s 57.668 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  43 s  62/453 msgs left
+msg INBOX/8402 {25496}        copied to INBOX/393        1.44 msgs/s  216.906 KiB/s 57.692 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  42 s  61/453 msgs left
+msg INBOX/8403 {13201}        copied to INBOX/394        1.44 msgs/s  216.472 KiB/s 57.705 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  42 s  60/453 msgs left
+msg INBOX/8404 {65710}        copied to INBOX/395        1.44 msgs/s  216.126 KiB/s 57.767 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  41 s  59/453 msgs left
+msg INBOX/8405 {7553}         copied to INBOX/396        1.44 msgs/s  215.679 KiB/s 57.775 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  40 s  58/453 msgs left
+msg INBOX/8406 {20623}        copied to INBOX/397        1.44 msgs/s  215.119 KiB/s 57.794 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  40 s  57/453 msgs left
+msg INBOX/8407 {25028}        copied to INBOX/398        1.44 msgs/s  214.426 KiB/s 57.818 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  39 s  56/453 msgs left
+msg INBOX/8408 {27996}        copied to INBOX/399        1.44 msgs/s  214.000 KiB/s 57.845 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  38 s  55/453 msgs left
+msg INBOX/8409 {18630}        copied to INBOX/400        1.44 msgs/s  213.563 KiB/s 57.863 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  38 s  54/453 msgs left
+msg INBOX/8410 {16658}        copied to INBOX/401        1.44 msgs/s  213.092 KiB/s 57.879 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  37 s  53/453 msgs left
+msg INBOX/8411 {14304}        copied to INBOX/402        1.44 msgs/s  212.684 KiB/s 57.892 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  36 s  52/453 msgs left
+msg INBOX/8412 {4027}         copied to INBOX/403        1.44 msgs/s  212.244 KiB/s 57.896 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  35 s  51/453 msgs left
+msg INBOX/8413 {3958}         copied to INBOX/404        1.44 msgs/s  211.802 KiB/s 57.900 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  35 s  50/453 msgs left
+msg INBOX/8414 {3956}         copied to INBOX/405        1.44 msgs/s  211.367 KiB/s 57.904 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  34 s  49/453 msgs left
+msg INBOX/8415 {3917}         copied to INBOX/406        1.44 msgs/s  210.931 KiB/s 57.907 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  33 s  48/453 msgs left
+msg INBOX/8416 {3918}         copied to INBOX/407        1.44 msgs/s  210.473 KiB/s 57.911 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  33 s  47/453 msgs left
+msg INBOX/8417 {3916}         copied to INBOX/408        1.44 msgs/s  209.800 KiB/s 57.915 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  32 s  46/453 msgs left
+msg INBOX/8418 {4065}         copied to INBOX/409        1.44 msgs/s  209.373 KiB/s 57.919 MiB copied ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  31 s  45/453 msgs left
+msg INBOX/8419 {3928}         copied to INBOX/410        1.44 msgs/s  208.946 KiB/s 57.922 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  31 s  44/453 msgs left
+msg INBOX/8420 {3931}         copied to INBOX/411        1.44 msgs/s  208.515 KiB/s 57.926 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  30 s  43/453 msgs left
+msg INBOX/8421 {3957}         copied to INBOX/412        1.44 msgs/s  208.091 KiB/s 57.930 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  29 s  42/453 msgs left
+msg INBOX/8422 {3942}         copied to INBOX/413        1.44 msgs/s  207.674 KiB/s 57.934 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  28 s  41/453 msgs left
+msg INBOX/8423 {3907}         copied to INBOX/414        1.44 msgs/s  207.254 KiB/s 57.937 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  28 s  40/453 msgs left
+msg INBOX/8424 {3859}         copied to INBOX/415        1.44 msgs/s  206.825 KiB/s 57.941 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  27 s  39/453 msgs left
+msg INBOX/8425 {4008}         copied to INBOX/416        1.44 msgs/s  206.386 KiB/s 57.945 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  26 s  38/453 msgs left
+msg INBOX/8426 {3941}         copied to INBOX/417        1.44 msgs/s  205.901 KiB/s 57.949 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  26 s  37/453 msgs left
+msg INBOX/8427 {4058}         copied to INBOX/418        1.44 msgs/s  205.382 KiB/s 57.953 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  25 s  36/453 msgs left
+msg INBOX/8428 {3945}         copied to INBOX/419        1.44 msgs/s  204.973 KiB/s 57.956 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  24 s  35/453 msgs left
+msg INBOX/8429 {4155}         copied to INBOX/420        1.44 msgs/s  204.553 KiB/s 57.960 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  24 s  34/453 msgs left
+msg INBOX/8430 {4134}         copied to INBOX/421        1.44 msgs/s  204.142 KiB/s 57.964 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  23 s  33/453 msgs left
+msg INBOX/8431 {4207}         copied to INBOX/422        1.44 msgs/s  203.727 KiB/s 57.968 MiB copied ETA: Monday 16 September 2024-09-16 12:34:55 Hora Padrão Brasil Central  22 s  32/453 msgs left
+msg INBOX/8432 {3948}         copied to INBOX/423        1.45 msgs/s  203.322 KiB/s 57.972 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  21 s  31/453 msgs left
+msg INBOX/8433 {3961}         copied to INBOX/424        1.45 msgs/s  202.921 KiB/s 57.976 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  21 s  30/453 msgs left
+msg INBOX/8434 {3946}         copied to INBOX/425        1.45 msgs/s  202.521 KiB/s 57.980 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  20 s  29/453 msgs left
+msg INBOX/8435 {31558}        copied to INBOX/426        1.45 msgs/s  202.130 KiB/s 58.010 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  19 s  28/453 msgs left
+msg INBOX/8436 {15034}        copied to INBOX/427        1.45 msgs/s  201.737 KiB/s 58.024 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  19 s  27/453 msgs left
+msg INBOX/8437 {81677}        copied to INBOX/428        1.45 msgs/s  201.471 KiB/s 58.102 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  18 s  26/453 msgs left
+msg INBOX/8438 {82270}        copied to INBOX/429        1.45 msgs/s  201.241 KiB/s 58.180 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  17 s  25/453 msgs left
+msg INBOX/8439 {6075}         copied to INBOX/430        1.45 msgs/s  200.857 KiB/s 58.186 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  17 s  24/453 msgs left
+msg INBOX/8440 {42668}        copied to INBOX/431        1.45 msgs/s  200.555 KiB/s 58.227 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  16 s  23/453 msgs left
+msg INBOX/8441 {28166}        copied to INBOX/432        1.45 msgs/s  200.211 KiB/s 58.254 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  15 s  22/453 msgs left
+msg INBOX/8442 {3871}         copied to INBOX/433        1.45 msgs/s  199.817 KiB/s 58.257 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  15 s  21/453 msgs left
+msg INBOX/8443 {4039}         copied to INBOX/434        1.45 msgs/s  199.432 KiB/s 58.261 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  14 s  20/453 msgs left
+msg INBOX/8444 {7947}         copied to INBOX/435        1.45 msgs/s  198.869 KiB/s 58.269 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  13 s  19/453 msgs left
+msg INBOX/8445 {67236}        copied to INBOX/436        1.45 msgs/s  198.547 KiB/s 58.333 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  12 s  18/453 msgs left
+msg INBOX/8446 {18640}        copied to INBOX/437        1.45 msgs/s  198.076 KiB/s 58.351 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  12 s  17/453 msgs left
+msg INBOX/8447 {3940}         copied to INBOX/438        1.45 msgs/s  197.696 KiB/s 58.354 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  11 s  16/453 msgs left
+msg INBOX/8448 {29671}        copied to INBOX/439        1.45 msgs/s  197.347 KiB/s 58.383 MiB copied ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  10 s  15/453 msgs left
+ETA: Monday 16 September 2024-09-16 12:34:54 Hora Padrão Brasil Central  10 s  15/453 msgs left
+Folder     2/8 [INBOX.Archive]                     -> [INBOX.Archive]                    
+Host1: folder [INBOX.Archive] has 0 messages in total (mentioned by SELECT)
+Creating folder [INBOX.Archive] on host2
+Created folder [INBOX.Archive] on host2
+Host2: folder [INBOX.Archive] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Archive] permanentflags: 
+Host2: Subscribing to folder INBOX.Archive
+Host1: folder [INBOX.Archive] considering 0 messages
+Host2: folder [INBOX.Archive] considering 0 messages
+Host1: folder [INBOX.Archive] selected 0 messages, duplicates 0
+Host2: folder [INBOX.Archive] selected 0 messages, duplicates 0
+ETA: Monday 16 September 2024-09-16 12:34:56 Hora Padrão Brasil Central  10 s  15/453 msgs left
+Folder     3/8 [INBOX.Drafts]                      -> [INBOX.Drafts]                     
+Host1: folder [INBOX.Drafts] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Drafts] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Drafts] permanentflags: 
+Host1: folder [INBOX.Drafts] considering 0 messages
+Host2: folder [INBOX.Drafts] considering 0 messages
+Host1: folder [INBOX.Drafts] selected 0 messages, duplicates 0
+Host2: folder [INBOX.Drafts] selected 0 messages, duplicates 0
+ETA: Monday 16 September 2024-09-16 12:34:57 Hora Padrão Brasil Central  10 s  15/453 msgs left
+Folder     4/8 [INBOX.Junk]                        -> [INBOX.Junk]                       
+Host1: folder [INBOX.Junk] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Junk] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Junk] permanentflags: 
+Host1: folder [INBOX.Junk] considering 0 messages
+Host2: folder [INBOX.Junk] considering 0 messages
+Host1: folder [INBOX.Junk] selected 0 messages, duplicates 0
+Host2: folder [INBOX.Junk] selected 0 messages, duplicates 0
+ETA: Monday 16 September 2024-09-16 12:34:58 Hora Padrão Brasil Central  11 s  15/453 msgs left
+Folder     5/8 [INBOX.Sent]                        -> [INBOX.Sent]                       
+Host1: folder [INBOX.Sent] has 3 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Sent] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Sent] permanentflags: 
+Host1: folder [INBOX.Sent] considering 3 messages
+Host2: folder [INBOX.Sent] considering 0 messages
+Host1: folder [INBOX.Sent] selected 3 messages, duplicates 0
+Host2: folder [INBOX.Sent] selected 0 messages, duplicates 0
+msg INBOX.Sent/11 {4993718}        copied to INBOX.Sent/1          1.41 msgs/s  208.369 KiB/s 63.145 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  10 s  14/453 msgs left
+msg INBOX.Sent/12 {82998}          copied to INBOX.Sent/2          1.41 msgs/s  208.129 KiB/s 63.224 MiB copied ETA: Monday 16 September 2024-09-16 12:35:01 Hora Padrão Brasil Central  9 s  13/453 msgs left
+msg INBOX.Sent/67 {340784}         copied to INBOX.Sent/3          1.41 msgs/s  208.465 KiB/s 63.549 MiB copied ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  8 s  12/453 msgs left
+ETA: Monday 16 September 2024-09-16 12:35:02 Hora Padrão Brasil Central  8 s  12/453 msgs left
+Folder     6/8 [INBOX.Spam]                        -> [INBOX.Spam]                       
+Host1: folder [INBOX.Spam] has 0 messages in total (mentioned by SELECT)
+Creating folder [INBOX.Spam] on host2
+Created folder [INBOX.Spam] on host2
+Host2: folder [INBOX.Spam] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Spam] permanentflags: 
+Host2: Subscribing to folder INBOX.Spam
+Host1: folder [INBOX.Spam] considering 0 messages
+Host2: folder [INBOX.Spam] considering 0 messages
+Host1: folder [INBOX.Spam] selected 0 messages, duplicates 0
+Host2: folder [INBOX.Spam] selected 0 messages, duplicates 0
+ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  9 s  12/453 msgs left
+Folder     7/8 [INBOX.Trash]                       -> [INBOX.Trash]                      
+Host1: folder [INBOX.Trash] has 12 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Trash] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.Trash] permanentflags: 
+Host1: folder [INBOX.Trash] considering 12 messages
+Host2: folder [INBOX.Trash] considering 0 messages
+Host1: folder [INBOX.Trash] selected 12 messages, duplicates 0
+Host2: folder [INBOX.Trash] selected 0 messages, duplicates 0
+msg INBOX.Trash/8047 {83551}        copied to INBOX.Trash/1          1.40 msgs/s  206.231 KiB/s 63.629 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  8 s  11/453 msgs left
+msg INBOX.Trash/8048 {15173}        copied to INBOX.Trash/2          1.40 msgs/s  205.887 KiB/s 63.643 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  7 s  10/453 msgs left
+msg INBOX.Trash/8049 {31186}        copied to INBOX.Trash/3          1.40 msgs/s  205.560 KiB/s 63.673 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  6 s  9/453 msgs left
+msg INBOX.Trash/8050 {22858}        copied to INBOX.Trash/4          1.40 msgs/s  205.192 KiB/s 63.695 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  6 s  8/453 msgs left
+msg INBOX.Trash/8051 {15244}        copied to INBOX.Trash/5          1.40 msgs/s  204.819 KiB/s 63.710 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  5 s  7/453 msgs left
+msg INBOX.Trash/8052 {37882}        copied to INBOX.Trash/6          1.40 msgs/s  204.511 KiB/s 63.746 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  4 s  6/453 msgs left
+msg INBOX.Trash/8053 {72846}        copied to INBOX.Trash/7          1.40 msgs/s  204.277 KiB/s 63.815 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  4 s  5/453 msgs left
+msg INBOX.Trash/8054 {82174}        copied to INBOX.Trash/8          1.40 msgs/s  204.051 KiB/s 63.893 MiB copied ETA: Monday 16 September 2024-09-16 12:35:05 Hora Padrão Brasil Central  3 s  4/453 msgs left
+msg INBOX.Trash/8055 {5036}         copied to INBOX.Trash/9          1.40 msgs/s  203.679 KiB/s 63.898 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  2 s  3/453 msgs left
+msg INBOX.Trash/8056 {20118}        copied to INBOX.Trash/10         1.40 msgs/s  203.326 KiB/s 63.917 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  1 s  2/453 msgs left
+msg INBOX.Trash/8057 {33972}        copied to INBOX.Trash/11         1.40 msgs/s  202.997 KiB/s 63.950 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  1 s  1/453 msgs left
+msg INBOX.Trash/8058 {8477}         copied to INBOX.Trash/12         1.40 msgs/s  202.637 KiB/s 63.958 MiB copied ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  0 s  0/453 msgs left
+ETA: Monday 16 September 2024-09-16 12:35:04 Hora Padrão Brasil Central  0 s  0/453 msgs left
+Folder     8/8 [INBOX.spam]                        -> [INBOX.spam]                       
+Host1: folder [INBOX.spam] has 0 messages in total (mentioned by SELECT)
+Creating folder [INBOX.spam] on host2
+Created folder [INBOX.spam] on host2
+Host2: folder [INBOX.spam] has 0 messages in total (mentioned by SELECT)
+Host2: folder [INBOX.spam] permanentflags: 
+Host2: Subscribing to folder INBOX.spam
+Host1: folder [INBOX.spam] considering 0 messages
+Host2: folder [INBOX.spam] considering 0 messages
+Host1: folder [INBOX.spam] selected 0 messages, duplicates 0
+Host2: folder [INBOX.spam] selected 0 messages, duplicates 0
+ETA: Monday 16 September 2024-09-16 12:35:06 Hora Padrão Brasil Central  0 s  0/453 msgs left
+++++ End looping on each folder
+
+Folders sizes after the synchronization.
+You can remove this foldersizes listing by using  "--nofoldersizesatend"
+Host1 folder     1/8 [INBOX]                             Size:  61218748 Messages:   438 Biggest:  23351112
+Host2 folder     1/8 [INBOX]                             Size:  61240434 Messages:   439 Biggest:  23351112
+Host2-Host1                                                        21686               1                  0
+
+Host1 folder     2/8 [INBOX.Archive]                     Size:         0 Messages:     0 Biggest:         0
+Host2 folder     2/8 [INBOX.Archive]                     Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     3/8 [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host2 folder     3/8 [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     4/8 [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder     4/8 [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     5/8 [INBOX.Sent]                        Size:   5417500 Messages:     3 Biggest:   4993718
+Host2 folder     5/8 [INBOX.Sent]                        Size:   5417500 Messages:     3 Biggest:   4993718
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     6/8 [INBOX.Spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder     6/8 [INBOX.Spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     7/8 [INBOX.Trash]                       Size:    428517 Messages:    12 Biggest:     83551
+Host2 folder     7/8 [INBOX.Trash]                       Size:    428517 Messages:    12 Biggest:     83551
+Host2-Host1                                                            0               0                  0
+
+Host1 folder     8/8 [INBOX.spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder     8/8 [INBOX.spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 Nb folders:                     8 folders
+Host2 Nb folders:                     8 folders
+
+Host1 Nb messages:                  453 messages
+Host2 Nb messages:                  454 messages
+
+Host1 Total size:              67064765 bytes (63.958 MiB)
+Host2 Total size:              67086451 bytes (63.979 MiB)
+
+Host1 Biggest message:         23351112 bytes (22.269 MiB)
+Host2 Biggest message:         23351112 bytes (22.269 MiB)
+
+Time spent on sizing:         6.6 seconds
+++++ Statistics
+Transfer started on                     : Monday 16 September 2024-09-16 12:29:27 Hora Padrão Brasil Central
+Transfer ended on                       : Monday 16 September 2024-09-16 12:35:13 Hora Padrão Brasil Central
+Transfer time                           : 346.0 sec
+Folders synced                          : 8/8 synced
+Folders deleted on host2                : 0 
+Messages transferred                    : 453 
+Messages skipped                        : 0
+Messages found duplicate on host1       : 0
+Messages found duplicate on host2       : 0
+Messages found crossduplicate on host2  : 0
+Messages void (noheader) on host1       : 0  
+Messages void (noheader) on host2       : 0
+Messages found in host1 not in host2    : 0 messages
+Messages found in host2 not in host1    : 1 messages
+Messages deleted on host1               : 0
+Messages deleted on host2               : 0
+Total bytes transferred                 : 67064765 (63.958 MiB)
+Total bytes skipped                     : 0 (0.000 KiB)
+Message rate                            : 1.3 messages/s
+Average bandwidth rate                  : 189.3 KiB/s
+Reconnections to host1                  : 0
+Reconnections to host2                  : 0
+Memory consumption at the end           : 227.1 MiB (*time 21.8 MiB*h) (started with 182.4 MiB)
+Load end is                             : unknown on 8 cores
+CPU time and %cpu                       : 10.733 sec 3.1 %cpu 0.4 %allcpus
+Biggest message transferred             : 23351112 bytes (22.269 MiB)
+Memory/biggest message ratio            : 10.2
+Start difference host2 - host1          : -452 messages, -67043079 bytes (-63.937 MiB)
+Final difference host2 - host1          : 1 messages, 21686 bytes (21.178 KiB)
+The sync looks good, all 453 identified messages in host1 are on host2.
+There is no unidentified message on host1.
+The sync is not strict, there are 1 among 454 identified messages in host2 that are not on host1. Use --delete2 and sync again to delete them and have a strict sync.
+Detected 0 errors
+This imapsync is up to date. ( local 2.290 >= official 2.290 )( Use --noreleasecheck to avoid this release check. )
+Homepage: https://imapsync.lamiral.info/
+Exiting with return value 0 (EX_OK: successful termination) 0/50 nb_errors/max_errors PID 10484
+Removing pidfile .//imapsync.pid
+Log file is LOG_imapsync/2024_09_16_12_29_27_404_contato_arloesitech_com_br_contato_arloesitech_com_br.txt ( to change it, use --logfile filepath ; or use --nolog to turn off logging )
