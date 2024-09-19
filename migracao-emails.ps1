@@ -1,5 +1,8 @@
-﻿# Caminho para o imapsync.exe
-$imapsyncPath = "C:\Users\valdo\Downloads\Sites migração\imapsync_2.290\imapsync.exe"
+﻿# Definir a codificação do console para UTF-8
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
+# Caminho para o imapsync.exe
+$imapsyncPath = ""
 
 # Lista de e-mails a serem migrados
 $emails = @(
