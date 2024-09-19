@@ -7,6 +7,10 @@ Este script em PowerShell utiliza o `imapsync.exe` para migrar e-mails de um ser
 Aqui está o código principal do script, seguido de uma explicação linha por linha:
 
 ```powershell
+
+# Definir a codificação do console para UTF-8
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
 # Caminho para o executável
 $imapsyncPath = "C:\caminho\para\imapsync.exe"
 
@@ -46,7 +50,7 @@ $emails = @("user1@example.com", "user2@example.com")
 Aqui, criamos um array $emails que contém os endereços de e-mail que desejamos migrar. Você pode adicionar quantos e-mails quiser.
 
 
-*********************************1
+#*********************************1
 Definição da Senha:
 powershell
 Copiar código
@@ -55,7 +59,7 @@ Esta linha define a variável $senha, que armazena a senha a ser usada para aute
 *********************************
 
 
-*********************************2
+#*********************************2
 Configurações do Servidor de Origem:
 powershell
 Copiar código
@@ -64,7 +68,7 @@ $portaOrigem = 993
 $servidorOrigem especifica o endereço do servidor de e-mail de origem. $portaOrigem define a porta utilizada para a conexão, que é 993, o padrão para IMAP sobre SSL.
 *********************************
 
-*********************************3
+#*********************************3
 Configurações do Servidor de Destino:
 powershell
 Copiar código
@@ -73,7 +77,7 @@ $portaDestino = 993
 Similar à origem, $servidorDestino é o endereço do servidor para o qual os e-mails serão migrados, e $portaDestino também é 993.
 *********************************
 
-*********************************4
+#*********************************4
 Loop para Migrar E-mails:
 powershell
 Copiar código
@@ -81,7 +85,7 @@ foreach ($email in $emails) {
 Este foreach inicia um loop que irá iterar por cada endereço de e-mail na lista $emails.
 *********************************
 
-*********************************5
+#*********************************5
 Chamada do IMAPSync:
 powershell
 Copiar código
