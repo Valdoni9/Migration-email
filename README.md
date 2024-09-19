@@ -105,5 +105,4 @@ Mensagem de Conclusão da Migração:
 powershell
 Copiar código
 Write-Host "Migração concluída para: $email"
-Após a migração de cada e-mail - 
-Esta linha imprime uma mensagem no console informando que a migração foi concluída para o e-mail atual.
+Após a migração de cada e-mail, esta linha imprime uma mensagem no console informando que a migração foi concluída para o e-mail atual.
