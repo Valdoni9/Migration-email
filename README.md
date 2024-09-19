@@ -46,7 +46,7 @@ $emails = @("user1@example.com", "user2@example.com")
 Aqui, criamos um array $emails que contém os endereços de e-mail que desejamos migrar. Você pode adicionar quantos e-mails quiser.
 
 
-*********************************
+*********************************1
 Definição da Senha:
 powershell
 Copiar código
@@ -55,7 +55,7 @@ Esta linha define a variável $senha, que armazena a senha a ser usada para aute
 *********************************
 
 
-*********************************
+*********************************2
 Configurações do Servidor de Origem:
 powershell
 Copiar código
@@ -64,7 +64,7 @@ $portaOrigem = 993
 $servidorOrigem especifica o endereço do servidor de e-mail de origem. $portaOrigem define a porta utilizada para a conexão, que é 993, o padrão para IMAP sobre SSL.
 *********************************
 
-*********************************
+*********************************3
 Configurações do Servidor de Destino:
 powershell
 Copiar código
@@ -73,7 +73,7 @@ $portaDestino = 993
 Similar à origem, $servidorDestino é o endereço do servidor para o qual os e-mails serão migrados, e $portaDestino também é 993.
 *********************************
 
-*********************************
+*********************************4
 Loop para Migrar E-mails:
 powershell
 Copiar código
@@ -81,7 +81,7 @@ foreach ($email in $emails) {
 Este foreach inicia um loop que irá iterar por cada endereço de e-mail na lista $emails.
 *********************************
 
-*********************************
+*********************************5
 Chamada do IMAPSync:
 powershell
 Copiar código
@@ -101,4 +101,5 @@ Mensagem de Conclusão da Migração:
 powershell
 Copiar código
 Write-Host "Migração concluída para: $email"
-Após a migração de cada e-mail, esta linha imprime uma mensagem no console informando que a migração foi concluída para o e-mail atual.
+Após a migração de cada e-mail - 
+Esta linha imprime uma mensagem no console informando que a migração foi concluída para o e-mail atual.
